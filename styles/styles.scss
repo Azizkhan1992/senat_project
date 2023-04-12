@@ -1,0 +1,162 @@
+@import './variables.scss';
+@import './components/home_header.scss';
+@import './components/home.scss';
+
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../static/fonts/SF-Pro-Display-Bold.ttf');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+// Margin Start
+
+.mt-32{
+    margin-top: 32px;
+}
+
+// Margin End
+
+// Displays Start
+
+.df-cen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.df-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.df-spb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+// Displays End
+
+// Fonts Start
+
+.commonT{
+    font-size: 3.5rem;
+    line-height: 150%;
+    font-weight: 500;
+    margin: 0;
+}
+
+.commonP{
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.descP{
+    font-size: 1.15rem;
+    line-height: 140%;
+    font-weight: 600;
+    color: $textColorBl;
+    margin: 0;
+}
+
+.descBl{
+    font-size: 1.15rem;
+    line-height: 140%;
+    font-weight: 600;
+    color: $colorBlue;
+}
+
+.descT{
+    font-size: 1.25rem;
+    line-height: 140%;
+    font-weight: 800;
+    color: $textColorBl;
+    margin: 0;
+}
+
+.mainP{
+    font-size: 1.65rem;
+    line-height: 140%;
+    font-weight: 700;
+    color: $textColorBl;
+    margin: 0;
+}
+
+// Fonts End
+
+.commonContent{
+    width: 1720px;
+    margin: 0 auto;
+}
+
+.vert_hr{
+    width: 0;
+    height: 24px;
+    display: inline-block;
+    border: 1px solid $textColorBl;
+    opacity: 0.2;
+    margin: 0 24px;
+}
+
+.title_box{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.desc_box{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.circle_play{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1560px) and (min-width: 1060px) {
+    .commonContent{
+        width: 1020px;
+    }
+
+    .commonP{
+        font-size: 0.85rem;
+    }
+
+    .descP{
+        font-size: 1rem;
+    }
+
+    .descT{
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width: 1060px) and (min-width: 760px) {
+    .commonContent{
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .commonContent{
+        width: 300px;
+    }
+}
