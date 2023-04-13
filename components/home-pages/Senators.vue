@@ -44,7 +44,6 @@ export default {
     },
     computed:{
         senators(){
-            console.log(this.$store.getters.getSenators)
             return this.$store.getters.getSenators
         }
     }

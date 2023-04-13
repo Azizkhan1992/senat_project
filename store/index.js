@@ -1224,6 +1224,281 @@ export const state = () => ({
             },
             number: '2 574'
         }
+    ],
+
+    homeArticles: [
+        {
+            id: 1,
+            title: {
+                uz: 'O‘zbekiston mintaqaviy va global masalalarga yechim topishda asosiy tashabbuskorga aylanmoqda',
+                uzc: 'Ўзбекистон минтақавий ва глобал масалаларга ечим топишда асосий ташаббускорга айланмоқда',
+                ru: 'Узбекистан становится главным инициатором в поиске решений региональных и глобальных вопросов'
+            },
+            date: {
+                uz: '12 noyabrь, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            }
+        },
+        {
+            id: 2,
+            title: {
+                uz: 'Sirdaryo-Qonliko‘l do‘stlik bayrami barchaga yuqori kayfiyat ulashdi',
+                uzc: 'Сирдарё-Қонликўл дўстлик байрами барчага юқори кайфият улашди',
+                ru: 'Праздник дружбы «Сырдарья-Конликоль» подарил всем хорошее настроение'
+            },
+            date: {
+                uz: '12 noyabrь, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            }
+        },
+        {
+            id: 3,
+            title: {
+                uz: 'O‘zbekiston mintaqaviy va global masalalarga yechim topishda asosiy tashabbuskorga aylanmoqda',
+                uzc: 'Ўзбекистон минтақавий ва глобал масалаларга ечим топишда асосий ташаббускорга айланмоқда',
+                ru: 'Узбекистан становится главным инициатором в поиске решений региональных и глобальных вопросов'
+            },
+            date: {
+                uz: '12 noyabrь, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            }
+        },
+        {
+            id: 4,
+            title: {
+                uz: 'Tinchlik va ezgulik ovozi bo‘lib jaranglagan anjuman',
+                uzc: 'Тинчлик ва эзгулик овози бўлиб жаранглаган анжуман',
+                ru: 'Конференция, прозвучавшая голосом мира и добра'
+            },
+            date: {
+                uz: '12 noyabrь, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            }
+        },
+        {
+            id: 5,
+            title: {
+                uz: 'Senat Bundestag bilan hamkorlikni faollashtiradi',
+                uzc: 'Сенат Бундестаг билан ҳамкорликни фаоллаштиради',
+                ru: 'Сенат активизирует сотрудничество с Бундестагом'
+            },
+            date: {
+                uz: '12 noyabrь, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            }
+        },
+        {
+            id: 6,
+            title: {
+                uz: 'Senat qo‘mitalari qo‘shma majlisida xalq ta\'limi vazirining axboroti eshitildi',
+                uzc: 'Сенат қўмиталари қўшма мажлисида халқ таълими вазирининг ахбороти эшитилди',
+                ru: 'Информация министра народного просвещения заслушана на совместном заседании комитетов Сената'
+            },
+            date: {
+                uz: '12 noyabrь, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            }
+        },
+        {
+            id: 7,
+            title: {
+                uz: 'ShHTning Samarqand sammiti mamlakatlar taraqqiyotining garovi',
+                uzc: 'ШҲТнинг Самарқанд саммити мамлакатлар тараққиётининг гарови',
+                ru: 'Самаркандский саммит ШОС – залог развития стран'
+            },
+            date: {
+                uz: '12 noyabrь, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            }
+        },
+        {
+            id: 8,
+            title: {
+                uz: 'Samarqand sammiti ShHT makonida butkul yangi davrni boshlab beradi',
+                uzc: 'Самарқанд саммити ШҲТ маконида буткул янги даврни бошлаб беради',
+                ru: 'Саммит в Самарканде откроет совершенно новую эру на пространстве ШОС'
+            },
+            date: {
+                uz: '12 noyabrь, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            }
+        }
+    ],
+
+    videoGallery: [
+        {
+            id: 1,
+            title: {
+                uz: 'Qashqadaryo viloyatining turizm salohiyatini rivojlantirish...',
+                uzc: 'Қашқадарё вилоятининг туризм салоҳиятини ривожлантириш...',
+                ru: 'Развитие туристического потенциала Кашкадарьинской области...'
+            },
+            date: {
+                uz: '12 noyabr, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            },
+            link: 'https://www.youtube.com/embed/vQVwkyn3-F8?autoplay=1',
+            img: 'video1.png'
+        },
+        {
+            id: 2,
+            title: {
+                uz: 'Qashqadaryo viloyatining turizm salohiyatini rivojlantirish...',
+                uzc: 'Қашқадарё вилоятининг туризм салоҳиятини ривожлантириш...',
+                ru: 'Развитие туристического потенциала Кашкадарьинской области...'
+            },
+            date: {
+                uz: '12 noyabr, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            },
+            link: 'https://www.youtube.com/embed/vQVwkyn3-F8?autoplay=1',
+            img: 'video2.png'
+        },
+        {
+            id: 3,
+            title: {
+                uz: 'Qashqadaryo viloyatining turizm salohiyatini rivojlantirish...',
+                uzc: 'Қашқадарё вилоятининг туризм салоҳиятини ривожлантириш...',
+                ru: 'Развитие туристического потенциала Кашкадарьинской области...'
+            },
+            date: {
+                uz: '12 noyabr, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            },
+            link: 'https://www.youtube.com/embed/vQVwkyn3-F8?autoplay=1',
+            img: 'video3.png'
+        },
+        {
+            id: 4,
+            title: {
+                uz: 'Qashqadaryo viloyatining turizm salohiyatini rivojlantirish...',
+                uzc: 'Қашқадарё вилоятининг туризм салоҳиятини ривожлантириш...',
+                ru: 'Развитие туристического потенциала Кашкадарьинской области...'
+            },
+            date: {
+                uz: '12 noyabr, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            },
+            link: 'https://www.youtube.com/embed/vQVwkyn3-F8?autoplay=1',
+            img: 'video4.png'
+        }
+    ],
+
+    photoGallery: [
+        {
+            id: 1,
+            title: {
+                uz: 'Qashqadaryo viloyatining turizm salohiyatini rivojlantirish...',
+                uzc: 'Қашқадарё вилоятининг туризм салоҳиятини ривожлантириш...',
+                ru: 'Развитие туристического потенциала Кашкадарьинской области...'
+            },
+            date: {
+                uz: '12 noyabr, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            },
+            img: 'video4.png'
+        },
+        {
+            id: 2,
+            title: {
+                uz: 'Fotoreportaj: “Mahalla – beshta tashabbus beshigi” ko‘rik-tanlovi g‘oliblarini taqdirlash marosimi bo‘lib o‘tdi',
+                uzc: 'Фоторепортаж: “Маҳалла – бешта ташаббус бешиги” кўрик-танлови ғолибларини тақдирлаш маросими бўлиб ўтди',
+                ru: 'Фоторепортаж: Состоялась церемония награждения победителей конкурса «Mahalla – beshta tashabbus beshigi»'
+            },
+            date: {
+                uz: '12 noyabr, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            },
+            img: 'photo1.jpg'
+        },
+        {
+            id: 3,
+            title: {
+                uz: 'Oliy Majlis Senati Raisining MDH Parlamentlararo Assambleyasi Kengashi majlisi ishidagi ishtiroki',
+                uzc: 'Олий Мажлис Сенати Раисининг МДҲ Парламентлараро Ассамблеяси Кенгаши мажлиси ишидаги иштироки',
+                ru: 'Участие Председателя Сената Олий Мажлиса в заседании Совета Межпарламентской Ассамблеи СНГ'
+            },
+            date: {
+                uz: '12 noyabr, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            },
+            img: 'photo2.jpg'
+        },
+        {
+            id: 4,
+            title: {
+                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senatining yigirma birinchi yalpi majlisi',
+                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенатининг йигирма биринчи ялпи мажлиси',
+                ru: 'Двадцать первое пленарное заседание Сената Олий Мажлиса Республики Узбекистан'
+            },
+            date: {
+                uz: '12 noyabr, 2022 y',
+                uzc: '12 ноябрь, 2022 й',
+                ru: '12 ноября 2022 г.'
+            },
+            img: 'photo3.jpg'
+        }
+    ],
+    usefulSites: [
+        {
+            id: 1,
+            title: {
+                uz: 'Oliy Majlisning inson huquqlari bo‘yicha vakili (Ombudsman)',
+                uzc: 'Олий Мажлиснинг инсон ҳуқуқлари бўйича вакили (Омбудсман)',
+                ru: 'Уполномоченный Олий Мажлиса по правам человека (Омбудсмен)'
+            },
+            name: 'ombudsman.uz',
+            link: 'http://ombudsman.uz/',
+            img: 'img1.svg'
+        },
+        {
+            id: 2,
+            title: {
+                uz: 'O‘zbekiston Respublikasi Prezidentining rasmiy veb-sayti',
+                uzc: 'Ўзбекистон Республикаси Президентининг расмий веб-сайти',
+                ru: 'Официальный сайт Президента Республики Узбекистан'
+            },
+            name: 'president.uz',
+            link: 'https://president.uz/',
+            img: 'img2.svg'
+        },
+        {
+            id: 3,
+            title: {
+                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Qonunchilik palatasi',
+                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Қонунчилик палатаси',
+                ru: 'Законодательная палата Олий Мажлиса Республики Узбекистан'
+            },
+            name: 'parliament.gov.uz',
+            link: 'parliament.gov.uz',
+            img: 'img3.svg'
+        },
+        {
+            id: 4,
+            title: {
+                uz: 'Jamoaviy murojaatlar portali',
+                uzc: 'Жамоавий мурожаатлар портали',
+                ru: 'Портал обращений сообщества'
+            },
+            name: 'meningfikrim.uz',
+            link: 'https://meningfikrim.uz/',
+            img: 'img4.svg'
+        }
     ]
 })
 

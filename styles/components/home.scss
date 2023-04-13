@@ -172,7 +172,7 @@
         color: $colorWhite;
       }
 
-      a{
+      a {
         display: flex;
         align-items: center;
         row-gap: 4px;
@@ -246,9 +246,9 @@
       filter: drop-shadow(0px 2px 40px rgba(0, 0, 0, 0.08));
       border-radius: 2px;
 
-      &:hover{
+      &:hover {
         backdrop-filter: blur(6px);
-        background-color: hsla(0,0%,100%,.1);
+        background-color: hsla(0, 0%, 100%, 0.1);
       }
 
       h3 {
@@ -500,550 +500,933 @@
 
 // News End
 
-
 // Assembly Start
 
-.assembly_section{
-    padding: 80px 0;
-    box-sizing: border-box;
-    background: $colorBlue;
-    margin-top: 120px;
-    position: relative;
-    z-index: 1;
+.assembly_section {
+  padding: 80px 0;
+  box-sizing: border-box;
+  background: $colorBlue;
+  margin-top: 120px;
+  position: relative;
+  z-index: 1;
 
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("@/static/images/Sign1.png") no-repeat;
+    background-position: center;
+    background-size: contain 90%;
+    z-index: -1;
+  }
 
-    &::after{
+  .assembly_container {
+    .assemblies_wrapper {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 24px;
+    }
+
+    .active_assembly_wrapper {
+      padding: 32px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .Img_wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &::after {
         content: "";
         width: 100%;
         height: 100%;
-        opacity: 0.1;
         position: absolute;
-        top: 0;
         left: 0;
-        background: url('@/static/images/Sign1.png') no-repeat;
-        background-position: center;
-        background-size: contain 90%;
-        z-index: -1;
+        top: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .circle_play {
+        position: absolute;
+        z-index: 9;
+        background: $textColorYl;
+      }
     }
 
-    .assembly_container{
-        
-
-        .assemblies_wrapper{
-            display: flex;
-            justify-content: space-between;
-            column-gap: 24px;
-        }
-
-        .active_assembly_wrapper{
-            padding: 32px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .Img_wrapper{
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            &::after{
-                content: "";
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
-                background: rgba(0, 0, 0, 0.3);
-                z-index: 1;
-            }
-
-            .circle_play{
-                position: absolute;
-                z-index: 9;
-                background: $textColorYl;
-            }
-        }
-
-        .active_assembly_wrapper{
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-
-        .active_assembly_details{
-            width: calc(50% - 12px);
-
-            .details_top{
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                column-gap: 12px;
-            }
-
-            hr{
-                border: 1px solid $colorWhite;
-                opacity: 0.3;
-                margin: 24px 0;
-            }
-        }
-
-        .active_assembly_title{
-            h3{
-                text-transform: uppercase;
-                color: $textColorYl;
-            }
-
-            span{
-                text-transform: uppercase;
-                color: $colorWhite;
-            }
-        }
-
-        .active_assembly_number{
-
-            h2{
-                font-size: 4.5rem;
-                line-height: 140%;
-                font-weight: 500;
-                color: $textColorYl;
-                margin: 0;
-            }
-        }
-
-        .active_assembly__link{
-            display: flex;
-            flex-direction: column;
-            row-gap: 24px;
-
-            a{
-                display: flex;
-                justify-content: space-between;
-                color: $colorWhite;
-                font-size: 1.15rem;
-                line-height: 160%;
-                font-weight: 700;
-
-                svg{
-                    color: $textColorYl;
-                }
-            }
-        }
-
-        .all_assemblies_wrapper{
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            row-gap: 32px;
-
-            a{
-                display: flex;
-                align-items: center;
-                column-gap: 12px;
-                width: calc(50% - 12px);
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 4px;
-                padding: 38px 32px;
-                box-sizing: border-box;
-
-                p{
-                    text-transform: uppercase;
-                    color: $textColorYl;
-                }
-
-                span{
-                    text-transform: uppercase;
-                }
-
-                h3{
-                    color: $textColorYl;
-                }
-
-                .assembly_title{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    svg{
-                        color: $textColorYl;
-                    }
-                }
-
-                .assembly_title_details{
-                    width: calc(90% - 12px);
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 4px;
-                }
-            }
-        }
+    .active_assembly_wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
     }
+
+    .active_assembly_details {
+      width: calc(50% - 12px);
+
+      .details_top {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+      }
+
+      hr {
+        border: 1px solid $colorWhite;
+        opacity: 0.3;
+        margin: 24px 0;
+      }
+    }
+
+    .active_assembly_title {
+      h3 {
+        text-transform: uppercase;
+        color: $textColorYl;
+      }
+
+      span {
+        text-transform: uppercase;
+        color: $colorWhite;
+      }
+    }
+
+    .active_assembly_number {
+      h2 {
+        font-size: 4.5rem;
+        line-height: 140%;
+        font-weight: 500;
+        color: $textColorYl;
+        margin: 0;
+      }
+    }
+
+    .active_assembly__link {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+
+      a {
+        display: flex;
+        justify-content: space-between;
+        color: $colorWhite;
+        font-size: 1.15rem;
+        line-height: 160%;
+        font-weight: 700;
+
+        svg {
+          color: $textColorYl;
+        }
+      }
+    }
+
+    .all_assemblies_wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 32px;
+
+      a {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        width: calc(50% - 12px);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        padding: 38px 32px;
+        box-sizing: border-box;
+
+        p {
+          text-transform: uppercase;
+          color: $textColorYl;
+        }
+
+        span {
+          text-transform: uppercase;
+        }
+
+        h3 {
+          color: $textColorYl;
+        }
+
+        .assembly_title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          svg {
+            color: $textColorYl;
+          }
+        }
+
+        .assembly_title_details {
+          width: calc(90% - 12px);
+          display: flex;
+          flex-direction: column;
+          row-gap: 4px;
+        }
+      }
+    }
+  }
 }
 
 // Assemlbly End
 
-
 // Interactive Map Start
 
-.map_section{
-    margin-top: 120px;
+.map_section {
+  margin-top: 120px;
 
-    .interactive_map_container{
+  .interactive_map_container {
+    .map_tabs {
+      .ant-tabs {
+        .ant-tabs-tab {
+          font-size: 1.25rem;
+          line-height: 140%;
+          font-weight: 500;
 
-        .map_tabs{
-
-            .ant-tabs{
-
-                .ant-tabs-tab{
-                    font-size: 1.25rem;
-                    line-height: 140%;
-                    font-weight: 500;
-
-                    &:hover{
-                        color: $colorBlue;
-                    }
-                }
-
-                .ant-tabs-ink-bar{
-                    background: $colorBlue;
-                }
-
-                .ant-tabs-tab-active{
-                    font-size: 1.25rem;
-                    line-height: 140%;
-                    font-weight: 500;
-                    color: $colorBlue;
-                }
-
-                .ant-tabs-tabpane{
-                    margin-top: 64px;
-                }
-
-                .map_district_wrapper{
-
-                    .map_items{
-                        position: relative;
-
-                        .title{
-                            max-width: fit-content;
-                            position: absolute;
-                            padding: 4px 12px;
-                            box-sizing: border-box;
-                            background: $textColorGr;
-                            border-radius: 4px;
-
-                            &::after{
-                                content: "";
-                                position: absolute;
-                                left: calc(50% - 24px);
-                                bottom: -12px;
-                                border-left: 12px solid transparent;
-                                border-right: 12px solid transparent;
-                                border-top: 12px solid $textColorGr;
-                            }
-
-                            p{
-                                margin: 0;
-                                color: $colorWhite;
-                                font-size: 1rem;
-                                line-height: 140%;
-                                font-weight: 500;
-                            }
-                        }
-
-                        .buxoro_active{
-                            top: 320px;
-                            right: 540px;
-                        }
-
-                        .navoiy_active{
-                            top: 80px;
-                            left: 480px;
-                        }
-
-                        .andijon_active{
-                            top: 280px;
-                            right: 32px;
-                        }
-
-                        .karakalpak_active{
-                            left: 42px;
-                        }
-
-                        .xorazm_active{
-                            left: 300px;
-                            top: 240px;
-                        }
-
-                        .fargona_active{
-                            top: 340px;
-                            right: 100px;
-                        }
-
-                        .namangan_active{
-                            top: 280px;
-                            right: 90px;
-                        }
-
-                        .toshkent_vil_active{
-                            top: 260px;
-                            right: 180px;
-                        }
-
-                        .toshkent_sh_active{
-                            top: 280px;
-                            right: 220px;
-                        }
-
-                        .sirdaryo_active{
-                            top: 280px;
-                            left: 740px;
-                        }
-
-                        .jizzax_active{
-                            top: 320px;
-                            left: 700px;
-                        }
-
-                        .samarqand_active{
-                            top: 380px;
-                            left: 600px;
-                        }
-
-                        .qashqadaryo_active{
-                            top: 460px;
-                            left: 580px;
-                        }
-
-                        .surxondaryo_active{
-                            top: 520px;
-                            right: 300px;
-                        }
-
-                        svg{
-
-                            g{
-
-                                path{
-                                    cursor: pointer;
-                                    fill: $backBlue1;
-                                    stroke: $borderC1;
-                                    transition: 0.12s linear;
-
-                                    &.active{
-                                        fill: $colorBlue;
-                                    }
-
-                                    &:hover{
-                                        fill: $colorBlue;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+          &:hover {
+            color: $colorBlue;
+          }
         }
 
-        .senators_container{
-            padding: 20px;
-            box-sizing: border-box;
-            background: $backBlue1;
-            border-radius: 4px;
+        .ant-tabs-ink-bar {
+          background: $colorBlue;
+        }
+
+        .ant-tabs-tab-active {
+          font-size: 1.25rem;
+          line-height: 140%;
+          font-weight: 500;
+          color: $colorBlue;
+        }
+
+        .ant-tabs-tabpane {
+          margin-top: 64px;
+        }
+
+        .map_district_wrapper {
+          .map_items {
             position: relative;
 
-            &::after{
+            .title {
+              max-width: fit-content;
+              position: absolute;
+              padding: 4px 12px;
+              box-sizing: border-box;
+              background: $textColorGr;
+              border-radius: 4px;
+
+              &::after {
                 content: "";
-                width: 100%;
-                height: 54px;
                 position: absolute;
-                bottom: 0;
-                left: 0;
-                background: linear-gradient(180deg,rgba(243,247,255,0.15),#f3f7ff);
-                border-radius: 4px;
+                left: calc(50% - 24px);
+                bottom: -12px;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 12px solid $textColorGr;
+              }
+
+              p {
+                margin: 0;
+                color: $colorWhite;
+                font-size: 1rem;
+                line-height: 140%;
+                font-weight: 500;
+              }
             }
 
-            .senators_wrapper{
-                max-height: 680px;
-                overflow-y: scroll;
-                display: flex;
-                flex-direction: column;
-                row-gap: 12px;
-                scroll-behavior: smooth;
-
-                &::-webkit-scrollbar{
-                    width: 12px;
-                }
-
-                &::-webkit-scrollbar-thumb{
-                    background: $backGr3;
-                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                    border-radius: 12px;
-                }
-
-                .senators{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    height: 140px;
-                    padding: 16px 0;
-                    box-sizing: border-box;
-                    border-bottom: 1px solid $borderC2;
-
-                    &:last-child{
-                        border-bottom: 0;
-                    }
-
-                    .senator_details{
-                        display: flex;
-                        flex-direction: column;
-                        row-gap: 8px;
-
-                        h5{
-                            font-weight: 700;
-                        }
-                        p{
-                            color: $textColorBl;
-                            opacity: 0.8;
-                        }
-                    }
-
-                    .senator_img_wrapper{
-                        width: 100px;
-                        height: 100px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        
-
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            border-radius: 50%;
-                        }
-                    }
-                }
+            .buxoro_active {
+              top: 320px;
+              right: 540px;
             }
 
-            hr{
-                border: 1px solid $borderC2;
-                margin: 16px 0;
+            .navoiy_active {
+              top: 80px;
+              left: 480px;
             }
 
-            .senators_title{
-
-                span{
-                    color: $colorBlue;
-                    cursor: pointer;
-                }
-
-                h4{
-                    color: $colorBlue;
-                    font-weight: 700;
-                    line-height: 150%;
-                }
+            .andijon_active {
+              top: 280px;
+              right: 32px;
             }
+
+            .karakalpak_active {
+              left: 42px;
+            }
+
+            .xorazm_active {
+              left: 300px;
+              top: 240px;
+            }
+
+            .fargona_active {
+              top: 340px;
+              right: 100px;
+            }
+
+            .namangan_active {
+              top: 280px;
+              right: 90px;
+            }
+
+            .toshkent_vil_active {
+              top: 260px;
+              right: 180px;
+            }
+
+            .toshkent_sh_active {
+              top: 280px;
+              right: 220px;
+            }
+
+            .sirdaryo_active {
+              top: 280px;
+              left: 740px;
+            }
+
+            .jizzax_active {
+              top: 320px;
+              left: 700px;
+            }
+
+            .samarqand_active {
+              top: 380px;
+              left: 600px;
+            }
+
+            .qashqadaryo_active {
+              top: 460px;
+              left: 580px;
+            }
+
+            .surxondaryo_active {
+              top: 520px;
+              right: 300px;
+            }
+
+            svg {
+              g {
+                path {
+                  cursor: pointer;
+                  fill: $backBlue1;
+                  stroke: $borderC1;
+                  transition: 0.12s linear;
+
+                  &.active {
+                    fill: $colorBlue;
+                  }
+
+                  &:hover {
+                    fill: $colorBlue;
+                  }
+                }
+              }
+            }
+          }
         }
-
-        .assemblies_container{
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .assemblies_wrapper{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 2px 4px;
-            box-sizing: border-box;
-            row-gap: 24px;
-
-            .assembly_items{
-                width: calc(50% - 24px);
-                padding: 20px;
-                box-sizing: border-box;
-                box-shadow: 0 2px 20px rgba(0,0,0,.1);
-                border-radius: 4px;
-                cursor: pointer;
-                transition: 0.12s linear;
-
-                &.active{
-                    background: $colorBlue;
-
-                    h3{
-                        color: $colorWhite;
-                    }
-                }
-
-                h3{
-                    color: $colorBlue;
-                }
-            }
-        }
+      }
     }
-}
 
+    .senators_container {
+      padding: 20px;
+      box-sizing: border-box;
+      background: $backBlue1;
+      border-radius: 4px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 54px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(243, 247, 255, 0.15), #f3f7ff);
+        border-radius: 4px;
+      }
+
+      .senators_wrapper {
+        max-height: 680px;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+          width: 12px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $backGr3;
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          border-radius: 12px;
+        }
+
+        .senators {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 140px;
+          padding: 16px 0;
+          box-sizing: border-box;
+          border-bottom: 1px solid $borderC2;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+
+          .senator_details {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+
+            h5 {
+              font-weight: 700;
+            }
+            p {
+              color: $textColorBl;
+              opacity: 0.8;
+            }
+          }
+
+          .senator_img_wrapper {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      hr {
+        border: 1px solid $borderC2;
+        margin: 16px 0;
+      }
+
+      .senators_title {
+        span {
+          color: $colorBlue;
+          cursor: pointer;
+        }
+
+        h4 {
+          color: $colorBlue;
+          font-weight: 700;
+          line-height: 150%;
+        }
+      }
+    }
+
+    .assemblies_container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .assemblies_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2px 4px;
+      box-sizing: border-box;
+      row-gap: 24px;
+
+      .assembly_items {
+        width: calc(50% - 24px);
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.12s linear;
+
+        &.active {
+          background: $colorBlue;
+
+          h3 {
+            color: $colorWhite;
+          }
+        }
+
+        h3 {
+          color: $colorBlue;
+        }
+      }
+    }
+  }
+}
 
 // Interactive Map End
 
-
 // Appeal Statistics Start
 
-.statistics_section{
-    margin-top: 120px;
-    background: $colorBlue;
-    padding: 80px 0;
+.statistics_section {
+  margin-top: 120px;
+  background: $colorBlue;
+  padding: 80px 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: calc(-12% + 12px);
+    top: 0;
+    background: url("@/static/images/Sign1.png") no-repeat;
+    background-position: left;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  .statistics_header {
+    h2 {
+      color: $colorWhite;
+    }
+  }
+
+  .statistics_details {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    .statistics_items {
+      width: calc(25% - 24px);
+      padding: 24px;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+
+      p {
+        color: $colorWhite;
+      }
+
+      span {
+        font-size: 2.5rem;
+        line-height: 140%;
+        font-weight: 700;
+        color: $textColorYl;
+      }
+    }
+  }
+}
+
+// Appeal Statistics End
+
+// Home Articles Start
+
+.home_articles_section {
+  margin-top: 120px;
+
+  .home_articles_container {
+    .articles_header {
+      a {
+        color: $colorBlue1;
+      }
+    }
+
+    .articles_wrapper {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 32px;
+
+      .article_items {
+        width: calc(25% - 24px);
+        padding: 20px;
+        box-sizing: border-box;
+        background: $colorWhite;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        cursor: pointer;
+      }
+
+      .article_date_wrapper {
+        color: $colorBlue1;
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+
+        span {
+          color: $colorBlue1;
+        }
+      }
+    }
+  }
+}
+
+// Home Articles End
+
+// Home Banner Start
+
+.banner_section {
+  margin-top: 120px;
+
+  .banner_container {
+    padding: 85px 0 85px 100px;
     box-sizing: border-box;
     position: relative;
+    background: $colorBlue;
     z-index: 1;
 
-    &::after{
-        content: "";
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        left: calc(-12% + 12px);
-        top: 0;
-        background: url('@/static/images/Sign1.png') no-repeat;
-        background-position: left;
-        opacity: 0.1;
-        z-index: -1;
+    &::after {
+      width: 55%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url("@/static/images/banner.png") no-repeat;
+      background-position: right;
+      background-size: cover;
+      z-index: -1;
     }
 
-    .statistics_header{
+    h2 {
+      font-size: 2.5rem;
+      line-height: 140%;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $colorWhite;
+      margin: 0;
+      margin-bottom: 8px;
+    }
 
-        h2{
-            color: $colorWhite;
+    p {
+      color: $textColorYl;
+    }
+
+    .banner_items {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+
+      .banner_social_networks {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+
+        span {
+          color: $colorWhite;
+          opacity: 0.9;
         }
-    }
 
-    .statistics_details{
+        .social_items_wrapper {
+          display: flex;
+          align-items: center;
+          column-gap: 24px;
+        }
+
+        .social_items {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Home Banner End
+
+// Home Media Start
+
+.home_media_section {
+  margin-top: 120px;
+
+  .home_media_container {
+    .home_media_wrapper {
+      margin-top: 24px;
+
+      .ant-tabs-bar {
+        width: fit-content;
+
+        .ant-tabs-nav {
+          .ant-tabs-ink-bar {
+            background: $colorBlue;
+          }
+
+          .ant-tabs-tab {
+            font-size: 1.25rem;
+            line-height: 140%;
+            font-weight: 500;
+            color: $textColorGr;
+          }
+
+          .ant-tabs-tab-active {
+            color: $colorBlue;
+          }
+        }
+      }
+
+      .photo_gallery{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 32px;
+        padding: 4px;
+        box-sizing: border-box;
+        position: relative;
+
+        .photo_gallery_items{
+            width: calc(25% - 24px);
+          height: 340px;
+          padding: 20px;
+          box-sizing: border-box;
+          background: $colorWhite;
+          box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+          border-radius: 4px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 16px;
+          position: relative;
+          cursor: pointer;
+
+          &:hover{
+
+            .photo_image_wrapper{
+
+                &::before{
+                    opacity: 1;
+                    animation: shine 0.75s;
+                }
+            }
+          }
+
+          .photo_image_wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: calc(65% - 12px);
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: -75%;
+                z-index: 2;
+                display: block;
+                content: "";
+                width: 50%;
+                height: 100%;
+                opacity: 0;
+                background: linear-gradient(
+                  to right,
+                  rgba(255, 255, 255, 0) 0%,
+                  rgba(255, 255, 255, 0.3) 100%
+                );
+                transform: skewX(-25deg);
+              }
+
+            .circle_play{
+                position: absolute;
+                background: $colorBlue;
+                color: $colorWhite;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+          }
+
+          .photo_gallery_details{
+
+            .photo_date{
+                margin-top: 16px;
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+                color: $colorBlue;
+
+                span{
+                    color: $colorBlue;
+                }
+            }
+          }
+        }
+      }
+
+      .video_gallery {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 32px;
+        padding: 4px;
+        box-sizing: border-box;
+        position: relative;
+
+        .video_gallery_items {
+          width: calc(25% - 24px);
+          height: 340px;
+          padding: 20px;
+          box-sizing: border-box;
+          background: $colorWhite;
+          box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+          border-radius: 4px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 16px;
+          position: relative;
+          cursor: pointer;
+
+          .items_wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+          }
+
+          .videos_popup{
+            width: 90%;
+            height: 90%;
+            position: absolute;
+
+            .videos_exit{
+                position: absolute;
+                right: -24px;
+                top: 0;
+            }
+          }
+
+          &:hover{
+
+            .gallery_image_wrapper{
+
+                &::before{
+                    opacity: 1;
+                    animation: shine 0.75s;
+                }
+            }
+          }
+
+          .gallery_image_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+              position: absolute;
+              top: 0;
+              left: -75%;
+              z-index: 2;
+              display: block;
+              content: "";
+              width: 50%;
+              height: 100%;
+              opacity: 0;
+              background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 100%
+              );
+              transform: skewX(-25deg);
+            }
+
+            .circle_play {
+              position: absolute;
+              background: $colorBlue;
+              color: $colorWhite;
+            }
+          }
+
+          .video_date {
+            margin-top: 16px;
+            display: flex;
+            column-gap: 12px;
+            align-items: center;
+            color: $colorBlue;
+
+            span {
+              color: $colorBlue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Home Media End
+
+
+// Usefull Links Start
+
+.useful_links_section{
+    margin-top: 120px;
+
+    .link_details{
         margin-top: 24px;
         display: flex;
         justify-content: space-between;
 
-        .statistics_items{
+        .link_items{
             width: calc(25% - 24px);
-            padding: 24px;
-            box-sizing: border-box;
-            background: rgba(255, 255, 255, 0.1);
+            background: $colorWhite;
+            box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
             border-radius: 4px;
+            padding: 20px;
+            box-sizing: border-box;
+            cursor: pointer;
 
-            p{
-                color: $colorWhite;
+            .link_items_title{
+                display: flex;
+                align-items: center;
+                column-gap: 16px;
+
+                h3{
+                    color: $textColorBl;
+                }
             }
 
-            span{
-                font-size: 2.5rem;
-                line-height: 140%;
-                font-weight: 700;
-                color: $textColorYl;
+            .link_name{
+                margin-top: 24px;
+                display: flex;
+                column-gap: 10px;
+                background: rgba(0, 0, 0, 0.04);
+                padding: 4px;
+                box-sizing: border-box;
+
+                p{
+                    color: $colorBlue;
+                }
             }
         }
     }
 }
 
 
-// Appeal Statistics End
+// Usefull Links End

@@ -2,6 +2,7 @@
     "all": "Barchasi",
     "test" : "Sayt test rejimida ishlamoqda",
     "social": "Biz ijtimoiy tarmoqlarda",
+    "social_networks": "Ijtimoiy tarmoqlar",
     "UZB": "O'zbekiston Respublikasi",
     "senat": "Oliy Majlis Senati",
     "reception": "Virtual qabulxona",
@@ -13,5 +14,12 @@
     "by_district": "Viloyatlar bo‘yicha",
     "by_commit": "Qo‘mitalar bo‘yicha",
     "senators": "Deputatlar",
-    "appeal_statistics": "Murojaatlar bo‘yicha statistika"
+    "appeal_statistics": "Murojaatlar bo‘yicha statistika",
+    "articles": "Maqolalar",
+    "all_articles": "Barcha maqolalar",
+    "send": "Murojaat yuborish",
+    "media": "Mediateka",
+    "video_gallery": "Videogalereya",
+    "photo_gallery": "Fotogalereya",
+    "useful_links": "Foydali havolalar"
 }

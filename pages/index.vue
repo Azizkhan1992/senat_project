@@ -7,6 +7,10 @@
     <HomeAssembly/>
     <InteractiveMap/>
     <AppealStatistics/>
+    <HomeArticles/>
+    <HomeBanner/>
+    <HomeMedia/>
+    <UsefulLinks/>
   </main>
 </template>
 
@@ -18,8 +22,12 @@ import HomeNews from '~/components/home-pages/HomeNews.vue'
 import HomeAssembly from '~/components/home-pages/HomeAssembly.vue';
 import InteractiveMap from '~/components/home-pages/InteractiveMap.vue';
 import AppealStatistics from '~/components/home-pages/AppealStatistics.vue';
+import HomeArticles from '~/components/home-pages/HomeArticles.vue';
+import HomeBanner from '~/components/home-pages/HomeBanner.vue';
+import HomeMedia from '~/components/home-pages/HomeMedia.vue';
+import UsefulLinks from '~/components/home-pages/UsefulLinks.vue';
 export default {
   name: 'IndexPage',
-  components: {MainHeaderLayout, HotNews, InteractiveServices, HomeNews, HomeAssembly, InteractiveMap, AppealStatistics}
+  components: {MainHeaderLayout, HotNews, InteractiveServices, HomeNews, HomeAssembly, InteractiveMap, AppealStatistics, HomeArticles, HomeBanner, HomeMedia, UsefulLinks}
 }
 </script>
