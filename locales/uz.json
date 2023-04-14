@@ -8,7 +8,7 @@
     "reception": "Virtual qabulxona",
     "enter": "Kirish",
     "more": "Batafsil",
-    "news": "Yangiliklar",
+    "news": "Tadbirlar",
     "all_news": "Barcha yangiliklar",
     "map_title": "Interaktiv xarita",
     "by_district": "Viloyatlar bo‘yicha",
@@ -21,5 +21,14 @@
     "media": "Mediateka",
     "video_gallery": "Videogalereya",
     "photo_gallery": "Fotogalereya",
-    "useful_links": "Foydali havolalar"
+    "useful_links": "Foydali havolalar",
+    "inp_mail": "Emailingizni kiriting",
+    "subscribe": "Obuna bo‘lish",
+    "footer_phone_one": "Kanselyariya",
+    "footer_phone_two": "Fuqarolar murojaatlari uchun",
+    "address": "Manzil",
+    "exception_error1": "Sayt ma'lumotlaridan foydalanganda manbaga havola ko‘rsatilishi shart",
+    "exception_error2": "Agar matnda xato topsangiz, uni tanlang va ma'muriyatni xabardor qilish uchun CTRL+ENTER tugmasini bosing",
+    "footer_title1": "© 2023. Barcha huquqlar himoyalangan",
+    "footer_title2": "Sayt ishlab chiquvchisi"
 }

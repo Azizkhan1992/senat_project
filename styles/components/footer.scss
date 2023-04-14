@@ -1,0 +1,178 @@
+.footer {
+  margin-top: 120px;
+  background: $colorBlue1;
+
+  .footer_container {
+    .footer_header {
+      background: $backBlue;
+      padding: 40px 0;
+      box-sizing: border-box;
+
+      .footer_header_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header_details {
+          width: calc(60% - 48px);
+          display: flex;
+          justify-content: space-between;
+
+          .header_socials {
+            display: flex;
+            column-gap: 8px;
+
+            .social_items {
+              width: 40px;
+              height: 40px;
+              background: rgba(255, 255, 255, 0.05);
+              border-radius: 2px;
+              cursor: pointer;
+            }
+          }
+
+          .footer_search {
+            width: calc(70% - 12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+              width: 500px;
+              height: 40px;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              border-radius: 2px;
+              background: transparent;
+              padding: 12px 16px;
+              font-size: 1.15rem;
+              line-height: 140%;
+              font-weight: 500;
+              color: $colorWhite;
+
+              &::placeholder {
+                font-size: 1.15rem;
+                line-height: 140%;
+                font-weight: 500;
+                color: $colorWhite;
+                opacity: 0.8;
+              }
+
+              &:focus {
+                outline: 0;
+              }
+            }
+
+            button {
+              height: 40px;
+              padding: 5px 10px;
+            }
+          }
+        }
+      }
+
+      .header_center_logo {
+        column-gap: 16px;
+
+        .logo_title {
+          display: flex;
+          flex-direction: column;
+          row-gap: 4px;
+
+          h1 {
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $colorWhite;
+          }
+          h3 {
+            margin: 0;
+            text-transform: uppercase;
+            color: $colorWhite;
+          }
+        }
+      }
+    }
+
+    .footer-content {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+
+      .footer_links {
+        width: calc(50% - 12px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 16px;
+
+        .link_items {
+          width: calc(50% - 24px);
+
+          a {
+            color: $colorWhite;
+          }
+        }
+      }
+
+      .footer_content_details {
+        width: calc(50% - 24px);
+        display: flex;
+        justify-content: space-between;
+
+        .footer_contacts {
+          width: calc(50% - 48px);
+          display: flex;
+          flex-direction: column;
+          row-gap: 24px;
+
+          .phone_title_wrapper {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            color: $colorWhite;
+
+            span {
+              opacity: 0.8;
+            }
+
+            svg {
+              path {
+                opacity: 0.8;
+              }
+            }
+          }
+
+          p {
+            color: $colorWhite;
+          }
+        }
+
+        .footer_exception_error {
+          width: calc(50% - 24px);
+          height: fit-content;
+          background: $backBlue;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          row-gap: 16px;
+        }
+      }
+    }
+
+    hr {
+      margin-top: 40px;
+      border: 1px solid $colorWhite;
+      opacity: 0.2;
+    }
+
+    .footer_bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      box-sizing: border-box;
+    }
+  }
+}

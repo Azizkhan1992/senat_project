@@ -1,0 +1,130 @@
+// Breadcrumbs Start
+
+.breadcrumb_section {
+  width: 100%;
+  height: 280px;
+  background: $colorBlue;
+  padding: 60px;
+  box-sizing: border-box;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url("@/static/images/bg.png");
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+  }
+
+  .breadcrumb_container {
+    width: calc(60% - 24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+
+    .active_page_name {
+      h2 {
+        margin: 0;
+        font-size: 2.25rem;
+        line-height: 150%;
+        font-weight: 600;
+        color: $colorWhite;
+      }
+    }
+
+    .breadcrumb_header {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+
+      .descBl {
+        color: $colorWhite;
+        opacity: 1;
+      }
+
+      a {
+        display: flex;
+        column-gap: 10px;
+        color: $colorWhite;
+        opacity: 0.6;
+      }
+
+      p {
+        color: $colorWhite;
+        opacity: 0.6;
+      }
+
+      span {
+        color: $colorWhite;
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+// Breadcrumbs End
+
+// Sidebar Start
+
+.sidebar_container {
+  width: 100%;
+  padding-left: 20px;
+  box-sizing: border-box;
+
+  .sidebar_wrapper {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: $backBlue1;
+
+    .sidebar_header {
+      margin-bottom: 20px;
+
+      h3 {
+        color: $colorBlue;
+      }
+    }
+
+    .sidebar_content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      .sidebar_items {
+        &:not(.active) {
+          padding: 0;
+          list-style: none;
+        }
+
+        &.active {
+          li {
+            h4 {
+              color: $colorBlue;
+            }
+
+            &::marker {
+              width: 6px;
+              height: 6px;
+              font-size: 1.5rem;
+              color: $colorBlue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sidebar End

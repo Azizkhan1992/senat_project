@@ -1,6 +1,6 @@
 <template>
     <div class="tag_news">
-        <nuxt-link to="#" class="tag_news_items" v-for="item in news" :key="item.id">
+        <nuxt-link to="#" class="tag_news_items" data-aos="fade-up" data-aos-easing="ease-in-quart" :data-aos-duration="duration[idx]" v-for="(item, idx) in news" :key="item.id">
             <div class="tag_img_wrapper">
                 <img :src="require('../../static/images/'+item.img)" alt="">
             </div>
@@ -20,7 +20,8 @@ export default {
     name: 'tag-news',
     data(){
         return{
-            news: this.$store.state.tagNews
+            news: this.$store.state.tagNews,
+            duration: [200, 400, 600]
         }
     }
 }

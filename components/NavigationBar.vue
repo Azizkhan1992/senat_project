@@ -18,7 +18,7 @@
                             dropdown.id !== openMenuPages?.id ? 'closed' : ''
                         ">
                             <div class="drop_item" id="drp" v-for="link in dropdown.subMenu" :key="link.id">
-                                <a :href="link.link" class="descP">{{ link.name[$i18n.locale] }}</a>
+                                <nuxt-link :to="{path: `${link.link}`}" class="descP">{{ link.name[$i18n.locale] }}</nuxt-link>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,10 @@
 @import './variables.scss';
 @import './components/home_header.scss';
 @import './components/home.scss';
+@import './components/footer.scss';
+@import './components/customs.scss';
+@import './components/leaders.scss';
+@import './components/committees.scss';
 
 
 @font-face {
@@ -74,6 +78,7 @@ body{
     line-height: 140%;
     font-weight: 600;
     color: $colorBlue;
+    margin: 0;
 }
 
 .descT{

@@ -1,6 +1,6 @@
 <template>
     <div class="active_news">
-        <nuxt-link class="active_news_items" to="#" v-for="item in news" :key="item.id">
+        <nuxt-link class="active_news_items" data-aos="flip-right" data-aos-easing="ease-in-quart" data-aos-duration="400" to="#" v-for="item in news" :key="item.id">
             <div class="news_img_wrapper">
                 <img :src="require('../../static/images/'+item.img)" alt="">
             </div>

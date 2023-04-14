@@ -69,7 +69,7 @@ export const state = () => ({
                         uzc: 'Сенат раҳбарияти',
                         ru: 'Сенатское руководство'
                     },
-                    link: '#'
+                    link: 'leadership'
                 },
                 {
                     id: 5,
@@ -79,6 +79,33 @@ export const state = () => ({
                         ru: 'Совет Сената'
                     },
                     link: '#'
+                },
+                {
+                    id: 6,
+                    name: {
+                        uz: 'Qo‘mitalar',
+                        uzc: 'Қўмиталар',
+                        ru: 'Комитеты'
+                    },
+                    link: 'committees'
+                },
+                {
+                    id: 7,
+                    name: {
+                        uz: 'Komissiyalar',
+                        uzc: 'Комиссиялар',
+                        ru: 'Комиссии'
+                    },
+                    link: 'commissions'
+                },
+                {
+                    id: 8,
+                    name: {
+                        uz: 'Senatorlar',
+                        uzc: 'Сенаторлар',
+                        ru: 'Senators'
+                    },
+                    link: 'senators'
                 }
             ]
         },
@@ -1498,6 +1525,113 @@ export const state = () => ({
             name: 'meningfikrim.uz',
             link: 'https://meningfikrim.uz/',
             img: 'img4.svg'
+        }
+    ],
+
+    contacts: {
+        phone1: '+998 90 145-74-74',
+        phone2: '+998 90 145-74-74',
+        address: 'Тошкент шаҳри, Ислам Каримов кўчаси, 9-уй'
+    },
+    leaders: [
+        {
+            id: 1,
+            name: {
+                uz: 'Narbaeva Tanzila Kamalovna',
+                uzc: 'Нарбаева Танзила Камаловна',
+                ru: 'Нарбаева Танзила Камаловна'
+            },
+            step: {
+                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisi',
+                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раиси',
+                ru: 'Председатель Сената Олий Мажлиса Республики Узбекистан'
+            },
+            img: 'Narbayeva-Tanzila.jpg'
+        },
+        {
+            id: 2,
+            name: {
+                uz: 'Safoev Sodiq Solixovich',
+                uzc: 'Сафоев Содиқ Солихович',
+                ru: 'Сафоев Садик Солихович'
+            },
+            step: {
+                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisining birinchi o‘rinbosari',
+                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раисининг биринчи ўринбосари',
+                ru: 'Олий Мажлис Республики Узбекистан Первый заместитель Председателя Сената'
+            },
+            img: 'img40.png'
+        },
+        {
+            id: 3,
+            name: {
+                uz: 'Orinbaev Amanbay Tleubaevich',
+                uzc: 'Оринбаев Аманбай Тлеубаевич',
+                ru: 'Оринбаев Аманбай Тлеубаевич'
+            },
+            step: {
+                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisi o‘rinbosari, Qoraqalpog‘iston Respublikasi Jo‘qorg‘i Kengesi Raisi',
+                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раиси ўринбосари, Қорақалпоғистон Республикаси Жўқорғи Кенгеси Раиси',
+                ru: 'Заместитель Председателя Сената Олий Мажлиса Республики Узбекистан, Председатель Джокорги Совета Республики Каракалпакстан'
+            },
+            img: 'img15.png'
+        }
+    ],
+
+    committess: [
+        {
+            id: 1,
+            name: {
+                uz: 'Xalqaro munosabatlar, tashqi iqtisodiy aloqalar, xorijiy investisiyalar va turizm masalalari qo‘mitasi',
+                uzc: 'Халқаро муносабатлар, ташқи иқтисодий алоқалар, хорижий инвестициялар ва туризм масалалари қўмитаси',
+                ru: 'Комитет по международным отношениям, внешнеэкономическим связям, иностранным инвестициям и туризму'
+            },
+            link: 'Xalqaro munosabatlar, tashqi iqtisodiy aloqalar, xorijiy investisiyalar va turizm masalalari qo‘mitasi'
+        },
+        {
+            id: 2,
+            name: {
+                uz: 'Byudjet va iqtisodiy islohotlar masalalari qo‘mitasi',
+                uzc: 'Бюджет ва иқтисодий ислоҳотлар масалалари қўмитаси',
+                ru: 'Комитет по бюджету и экономическим реформам'
+            },
+            link: 'Byudjet va iqtisodiy islohotlar masalalari qo‘mitasi'
+        },
+        {
+            id: 3,
+            name: {
+                uz: 'Sud-huquq masalalari va korrupsiyaga qarshi kurashish qo‘mitasi',
+                uzc: 'Суд-ҳуқуқ масалалари ва коррупцияга қарши курашиш қўмитаси',
+                ru: 'Комитет по судебным вопросам и борьбе с коррупцией'
+            },
+            link: 'Sud-huquq masalalari va korrupsiyaga qarshi kurashish qo‘mitasi'
+        },
+        {
+            id: 4,
+            name: {
+                uz: 'Mudofaa va xavfsizlik masalalari qo‘mitasi',
+                uzc: 'Мудофаа ва хавфсизлик масалалари қўмитаси',
+                ru: 'Комитет по вопросам обороны и безопасности'
+            },
+            link: 'Mudofaa va xavfsizlik masalalari qo‘mitasi'
+        },
+        {
+            id: 5,
+            name: {
+                uz: 'Fan, ta\'lim va sog‘liqni saqlash masalalari qo‘mitasi',
+                uzc: 'Фан, таълим ва соғлиқни сақлаш масалалари қўмитаси',
+                ru: 'Комитет по науке, образованию и здравоохранению'
+            },
+            link: 'Fan, ta\'lim va sog‘liqni saqlash masalalari qo‘mitasi'
+        },
+        {
+            id: 6,
+            name: {
+                uz: 'Axborot siyosati va davlat organlarida ochiqlikni ta\'minlash masalalari qo‘mitasi',
+                uzc: 'Ахборот сиёсати ва давлат органларида очиқликни таъминлаш масалалари қўмитаси',
+                ru: 'Комитет по информационной политике и вопросам обеспечения открытости в государственных органах'
+            },
+            link: 'Axborot siyosati va davlat organlarida ochiqlikni ta\'minlash masalalari qo‘mitasi'
         }
     ]
 })
