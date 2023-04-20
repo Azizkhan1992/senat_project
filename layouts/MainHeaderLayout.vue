@@ -31,13 +31,15 @@
         <div class="header_center">
             <div class="header_center_content df-spb commonContent">
                 <div class="header_center_logo df-cen">
-                    <div class="logo_img ImgWr">
+                    <nuxt-link to="/">
+                        <div class="logo_img ImgWr">
                         <img src="../static/images/sign.png" alt="">
                     </div>
                     <div class="logo_title">
                         <h1 class="descP">{{ $t("UZB") }}</h1>
                         <h3 class="descT">{{ $t("senat") }}</h3>
                     </div>
+                    </nuxt-link>
                 </div>
                 <div class="center_right_content">
                     <div class="right_chances">

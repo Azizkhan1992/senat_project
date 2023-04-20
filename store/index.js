@@ -162,6 +162,7 @@ export const state = () => ({
                 uzc: 'Тадбирлар',
                 ru: 'События'
             },
+            type: 'section',
             subMenu: [
                 {
                     id: 8,
@@ -170,7 +171,7 @@ export const state = () => ({
                         uzc: 'Палаталарнинг қўшма мажлислари',
                         ru: 'Совместные заседания палат'
                     },
-                    link: '#'
+                    link: 'events/categories/Palatalarning qo\'shma majlislari'
                 },
                 {
                     id: 9,
@@ -179,7 +180,7 @@ export const state = () => ({
                         uzc: 'Қўмита ва комиссиялар мажлислари',
                         ru: 'Заседания комитетов и комиссий'
                     },
-                    link: '#'
+                    link: 'events/categories/Qo\'mita va komissiyalar majlislari'
                 },
                 {
                     id: 10,
@@ -188,7 +189,25 @@ export const state = () => ({
                         uzc: 'Конференсиялар, давра суҳбатлари, семинарлар ва бошқа тадбирлар',
                         ru: 'Конференции, круглые столы, семинары и другие мероприятия'
                     },
-                    link: '#'
+                    link: 'events/categories/Konferensiyalar, davra suhbatlari, seminarlar va boshqa tadbirlar'
+                },
+                {
+                    id: 11,
+                    name: {
+                        uz: 'Tabriklar',
+                        uzc: 'Табриклар',
+                        ru: 'Поздравления'
+                    },
+                    link: 'events/categories/Tabriklar'
+                },
+                {
+                    id: 12,
+                    name: {
+                        uz: 'Fuqaro murojaati',
+                        uzc: 'Фуқаро мурожаати',
+                        ru: 'Обращение граждан'
+                    },
+                    link: 'events/categories/Fuqaro murojaati'
                 }
             ]
         },
@@ -201,7 +220,7 @@ export const state = () => ({
             },
             subMenu: [
                 {
-                    id: 11,
+                    id: 13,
                     name: {
                         uz: 'Xorijiy delegatsiyalar tashrifi',
                         uzc: 'Хорижий делегациялар ташрифи',
@@ -210,7 +229,7 @@ export const state = () => ({
                     link: '#'
                 },
                 {
-                    id: 12,
+                    id: 14,
                     name: {
                         uz: 'Senat delegatsiyalarining xorijga safari',
                         uzc: 'Сенат делегацияларининг хорижга сафари',
@@ -219,7 +238,7 @@ export const state = () => ({
                     link: '#'
                 },
                 {
-                    id: 13,
+                    id: 15,
                     name: {
                         uz: 'Parlamentlararo hamkorlik',
                         uzc: 'Парламентлараро ҳамкорлик',
@@ -238,7 +257,7 @@ export const state = () => ({
             },
             subMenu: [
                 {
-                    id: 14,
+                    id: 16,
                     name: {
                         uz: 'Parlament eshituvlari',
                         uzc: 'Парламент эшитувлари',
@@ -247,7 +266,7 @@ export const state = () => ({
                     link: '#'
                 },
                 {
-                    id: 15,
+                    id: 17,
                     name: {
                         uz: 'Qonun hujjatlarining ijrosini o\'rganish',
                         uzc: 'Қонун ҳужжатларининг ижросини ўрганиш',
@@ -1586,6 +1605,94 @@ export const state = () => ({
                 uzc: 'Халқаро муносабатлар, ташқи иқтисодий алоқалар, хорижий инвестициялар ва туризм масалалари қўмитаси',
                 ru: 'Комитет по международным отношениям, внешнеэкономическим связям, иностранным инвестициям и туризму'
             },
+            committeCharter: {
+                charterHeader: {
+                    uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senatining Xalqaro munosabatlar, tashqi iqtisodiy aloqalar, xorijiy investisiyalar va turizm masalalari qo‘mitasi to‘g‘risida N I Z O M',
+                    uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенатининг Халқаро муносабатлар, ташқи иқтисодий алоқалар, хорижий инвестициялар ва туризм масалалари қўмитаси тўғрисида Н И З О М',
+                    ru: 'Н И З О М О Комитете по международным отношениям, внешнеэкономическим связям, иностранным инвестициям и туризму Сената Олий Мажлиса Республики Узбекистан'
+                },
+                common: {
+                    uz: '1. Ushbu Nizom O‘zbekiston Respublikasi Oliy Majlisi Senatining Xalqaro munosabatlar, tashqi iqtisodiy aloqalar, xorijiy investisiyalar va turizm masalalari qo‘mitasining (bundan buyon matnda Qo‘mita deb yuritiladi) asosiy vazifalari, funksiyalarini, shuningdek Qo‘mita faoliyatini tashkil etish hamda amalga oshirishda davlat hokimiyati va boshqaruvi, xo‘jalik boshqaruvi organlari, tashkilot hamda muassasalar, nodavlat notijorat tashkilotlari, ommaviy axborot vositalari va fuqarolar bilan hamkorlik qilish tartibini belgilaydi. 2. Qo‘mita o‘z faoliyatida O‘zbekiston Respublikasi Konstitusiyasiga, O‘zbekiston Respublikasi qonunlariga, O‘zbekiston Respublikasi Oliy Majlisi palatalari, O‘zbekiston Respublikasi Oliy Majlisi Senati (bundan buyon matnda Senat deb yuritiladi) Kengashi qarorlariga, shuningdek ushbu Nizomga amal qiladi. 3. Qo‘mita Senat oldida mas\'ul va unga hisobdordir',
+                    uzc: '1. Ушбу Низом Ўзбекистон Республикаси Олий Мажлиси Сенатининг Халқаро муносабатлар, ташқи иқтисодий алоқалар, хорижий инвестициялар ва туризм масалалари қўмитасининг (бундан буён матнда Қўмита деб юритилади) асосий вазифалари, функцияларини, шунингдек Қўмита фаолиятини ташкил этиш ҳамда амалга оширишда давлат ҳокимияти ва бошқаруви, хўжалик бошқаруви органлари, ташкилот ҳамда муассасалар, нодавлат нотижорат ташкилотлари, оммавий ахборот воситалари ва фуқаролар билан ҳамкорлик қилиш тартибини белгилайди. 2. Қўмита ўз фаолиятида Ўзбекистон Республикаси Конституциясига, Ўзбекистон Республикаси қонунларига, Ўзбекистон Республикаси Олий Мажлиси палаталари, Ўзбекистон Республикаси Олий Мажлиси Сенати (бундан буён матнда Сенат деб юритилади) Кенгаши қарорларига, шунингдек ушбу Низомга амал қилади. 3. Қўмита Сенат олдида масъул ва унга ҳисобдордир',
+                    ru: '1. Настоящее Положение определяет основные задачи и функции Комитета по международным отношениям, внешнеэкономическим связям, иностранным инвестициям и туризму (далее - Комитет) Сената Олий Мажлиса Республики Узбекистан, а также организация и осуществление деятельности Комитета определяет порядок взаимодействия с органами государственной власти и управления, органами хозяйственного управления, организациями и учреждениями, негосударственными некоммерческими организациями, средствами массовой информации и гражданами. 2. В своей деятельности Комитет руководствуется Конституцией Республики Узбекистан, законами Республики Узбекистан, решениями палат Олий Мажлиса Республики Узбекистан, Сената Олий Мажлиса Республики Узбекистан. Республики Узбекистан (далее - Сенат), а также применяется настоящее Положение. 3. Комитет ответственен и подотчетен Сенату.'  
+                }
+            },
+            activity: [
+                {
+                    id: 1,
+                    title: {
+                        uz: 'O‘zbekiston Respublikasi, bir tomondan va Buyuk Britaniya va Shimoliy Irlandiya Birlashgan Qirolligi, ikkinchi tomondan, o‘rtasida sherikchilikni ta\'sis etuvchi sherikchilik va hamkorlik to‘g‘risidagi Bitimni (Toshkent, 2019 yil 31 oktyabrь) ratifikasiya qilish haqida"gi O‘zbekiston Respublikasi Qonuni yuzasidan QO‘MITA XULOSASI',
+                        uzc: 'Ўзбекистон Республикаси, бир томондан ва Буюк Британия ва Шимолий Ирландия Бирлашган Қироллиги, иккинчи томондан, ўртасида шерикчиликни таъсис этувчи шерикчилик ва ҳамкорлик тўғрисидаги Битимни (Тошкент, 2019 йил 31 октябрь) ратификация қилиш ҳақида"ги Ўзбекистон Республикаси Қонуни юзасидан ҚЎМИТА ХУЛОСАСИ',
+                        ru: 'О ратификации Соглашения о партнерстве и сотрудничестве между Республикой Узбекистан, с одной стороны, и Соединенным Королевством Великобритании и Северной Ирландии, с другой стороны (Ташкент, 31 октября 2019 г.) ЗАКЛЮЧЕНИЕ КОМИТЕТА по Закон Республики Узбекистан'
+                    },
+                },
+                {
+                    id: 2,
+                    title: {
+                        uz: '“O‘zbekiston Respublikasining Bo‘g‘uvchi, zaharli yoki boshqa shu kabi gazlar va bakteriologik vositalarning urushda qo‘llanilishini taqiqlash to‘g‘risida”gi Protokolga (Jeneva, 1925 yil 17 iyunь) qo‘shilish haqida”gi O‘zbekiston Respublikasining Qonuni yuzasidan xulosa',
+                        uzc: '“Ўзбекистон Республикасининг Бўғувчи, заҳарли ёки бошқа шу каби газлар ва бактериологик воситаларнинг урушда қўлланилишини тақиқлаш тўғрисида”ги Протоколга (Женева, 1925 йил 17 июнь) қўшилиш ҳақида”ги Ўзбекистон Республикасининг Қонуни юзасидан хулоса',
+                        ru: 'О присоединении Республики Узбекистан к Протоколу «О запрещении применения на войне удушливых, ядовитых или других подобных газов и бактериологических средств» (Женева, 17 июня 1925 г.) Заключение по Закону Республики'
+                    }
+                },
+                {
+                    id: 3,
+                    title: {
+                        uz: '“Shanxay hamkorlik tashkilotiga a\'zo davlatlar o‘rtasida hamkorlikdagi harbiy o‘quvlarni o‘tkazish to‘g‘risidagi Bitimga qo‘shimchalar kiritish haqidagi Bayonnomani (Bishkek, 2019 yil 29 aprelь) ratifikasiya qilish to‘g‘risida”gi O‘zbekiston Respublikasi Qonuni yuzasidan',
+                        uzc: '“Шанхай ҳамкорлик ташкилотига аъзо давлатлар ўртасида ҳамкорликдаги ҳарбий ўқувларни ўтказиш тўғрисидаги Битимга қўшимчалар киритиш ҳақидаги Баённомани (Бишкек, 2019 йил 29 апрель) ратификация қилиш тўғрисида”ги Ўзбекистон Республикаси Қонуни юзасидан',
+                        ru: '«О ратификации Протокола о дополнениях к Соглашению о проведении совместных военных учений между государствами-членами Шанхайской организации сотрудничества (г.Бишкек, 29 апреля 2019 года)» О Законе Республики Узбекистан'
+                    }
+                },
+                {
+                    id: 4,
+                    title: {
+                        uz: '“Xalqaro xususiy huquq bo‘yicha Gaaga konferensiyasi Ustavini (Gaaga, 1951 yil 31 oktyabrь) ratifikasiya qilish haqida”gi O‘zbekiston Respublikasining Qonuni yuzasidan xulosa',
+                        uzc: '“Халқаро хусусий ҳуқуқ бўйича Гаага конференцияси Уставини (Гаага, 1951 йил 31 октябрь) ратификация қилиш ҳақида”ги Ўзбекистон Республикасининг Қонуни юзасидан хулоса',
+                        ru: 'Заключение по Закону Республики Узбекистан «О ратификации Устава Гаагской конференции по международному частному праву (Гаага, 31 октября 1951 года)»'
+                    }
+                }
+            ],
+            monitoring: [
+                {
+                    id: 1,
+                    title: {
+                        uz: 'O‘zbekiston Respublikasining Amerika Qo‘shma Shtatlari va Xitoy Xalq Respublikasidagi diplomatik vakolatxonalari rahbarlarining hisobotlari haqida',
+                        uzc: 'Ўзбекистон Республикасининг Америка Қўшма Штатлари ва Хитой Халқ Республикасидаги дипломатик ваколатхоналари раҳбарларининг ҳисоботлари ҳақида',
+                        ru: 'Об отчетах глав дипломатических миссий Республики Узбекистан в Соединенных Штатах Америки и Китайской Народной Республике'
+                    }
+                },
+                {
+                    id: 2,
+                    title: {
+                        uz: 'O‘zbekiston Respublikasi tashqi ishlar vazirining 2020 yilda O‘zbekiston Respublikasi Tashqi ishlar vazirligi zimmasiga yuklangan vazifalarni bajarish bo‘yicha faoliyati to‘g‘risidagi axboroti haqida',
+                        uzc: 'Ўзбекистон Республикаси ташқи ишлар вазирининг 2020 йилда Ўзбекистон Республикаси Ташқи ишлар вазирлиги зиммасига юкланган вазифаларни бажариш бўйича фаолияти тўғрисидаги ахбороти ҳақида',
+                        ru: 'Об информации Министра иностранных дел Республики Узбекистан о выполнении задач, возложенных на Министерство иностранных дел Республики Узбекистан в 2020 году'
+                    }
+                },
+                {
+                    id: 3,
+                    title: {
+                        uz: 'Oliy darajadagi tashriflar davomida erishilgan savdo-iqtisodiy hamkorlik kelishuvlarini amalga oshirishda parlament nazoratini kuchaytirish chora-tadbirlari to‘g‘risida',
+                        uzc: 'Олий даражадаги ташрифлар давомида эришилган савдо-иқтисодий ҳамкорлик келишувларини амалга оширишда парламент назоратини кучайтириш чора-тадбирлари тўғрисида',
+                        ru: 'О мерах по усилению парламентского контроля за выполнением договоренностей о торгово-экономическом сотрудничестве, достигнутых в ходе визитов на высшем уровне'
+                    }
+                },
+                {
+                    id: 4,
+                    title: {
+                        uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senatining Xalqaro munosabatlar, tashqi iqtisodiy aloqalar, xorijiy investisiyalar va turizm masalalari qo‘mitasi huzurida ekspertlar guruhini tashkil etish to‘g‘risida',
+                        uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенатининг Халқаро муносабатлар, ташқи иқтисодий алоқалар, хорижий инвестициялар ва туризм масалалари қўмитаси ҳузурида экспертлар гуруҳини ташкил этиш тўғрисида',
+                        ru: 'О создании группы экспертов при Комитете по международным отношениям, внешнеэкономическим связям, иностранным инвестициям и туризму Сената Олий Мажлиса Республики Узбекистан'
+                    }
+                },
+                {
+                    id: 5,
+                    title: {
+                        uz: '"Labor migration" elektron dasturiy majmuasi ishlashi samaradorligini o‘rganish yakunlari to‘g‘risida',
+                        uzc: '"Labor migration" электрон дастурий мажмуаси ишлаши самарадорлигини ўрганиш якунлари тўғрисида',
+                        ru: 'О результатах исследования эффективности электронного программного комплекса «Labor migration»'
+                    }
+                }
+            ],
             link: 'Xalqaro munosabatlar, tashqi iqtisodiy aloqalar, xorijiy investisiyalar va turizm masalalari qo‘mitasi'
         },
         {
@@ -1632,6 +1739,261 @@ export const state = () => ({
                 ru: 'Комитет по информационной политике и вопросам обеспечения открытости в государственных органах'
             },
             link: 'Axborot siyosati va davlat organlarida ochiqlikni ta\'minlash masalalari qo‘mitasi'
+        }
+    ],
+
+    events: [
+        {
+            id: 1,
+            eventType: 1,
+            commitType: 2,
+            title: {
+                uz: 'Bandlik dasturlari ijrosi — parlament nazoratida',
+                uzc: 'Бандлик дастурлари ижроси — парламент назоратида',
+                ru: 'Реализация программ занятости находится под парламентским контролем'
+            },
+            descript: {
+                uz: 'Joriy yilning 28 fevralь kuni Oliy Majlis Qonunchilik palatasining Mehnat va ijtimoiy masalalar qo‘mitasi hamda Oliy Majlis Senatining Byudjet va iqtisodiy islohotlar masalalari qo‘mitasining kengaytirilgan yig‘ilishi bo‘',
+                uzc: 'Жорий йилнинг 28 февраль куни Олий Мажлис Қонунчилик палатасининг Меҳнат ва ижтимоий масалалар қўмитаси ҳамда Олий Мажлис Сенатининг Бюджет ва иқтисодий ислоҳотлар масалалари қўмитасининг кенгайтирилган йиғилиши бў',
+                ru: '28 февраля текущего года состоится расширенное заседание Комитета по труду и социальным вопросам Законодательной палаты Олий Мажлиса и Комитета по бюджету и экономическим реформам Сената Олий Мажлиса.'
+            },
+            date: '28.02.2023',
+            viewed: 205,
+            img: 'img1.jpg'
+        },
+        {
+            id: 2,
+            eventType: 1,
+            commitType: 4,
+            title: {
+                uz: 'Qurilish vazirligi va Farg‘ona viloyati hokimligining hisobotlari tinglandi',
+                uzc: 'Қурилиш вазирлиги ва Фарғона вилояти ҳокимлигининг ҳисоботлари тингланди',
+                ru: 'Заслушаны отчеты Минстроя и хокима Ферганской области'
+            },
+            descript: {
+                uz: 'Joriy yilning 18-oktyabrь kuni Oliy Majlis Senatining Sud-huquq masalalari va korrupsiyaga qarshi kurashish qo‘mitasining majlisida Qurilish vazirligi va Farg‘ona viloyati hokimligining 2021-yil 9 oyida amalga oshirilgan ishlar yu ',
+                uzc: 'Жорий йилнинг 18-октябрь куни Олий Мажлис Сенатининг Суд-ҳуқуқ масалалари ва коррупсияга қарши курашиш қўмитасининг мажлисида Қурилиш вазирлиги ва Фарғона вилояти ҳокимлигининг 2021-йил 9 ойида амалга оширилган ишлар ю',
+                ru: '18 октября текущего года на заседании Комитета Сената Олий Мажлиса по вопросам судебной власти и права и противодействию коррупции Минстроя и хокима Ферганской области рассмотрели работу, проведенную на 9 числа 2021 года.'
+            },
+            date: '19.10.2023',
+            viewed: 205,
+            img: 'img2.jpg'
+        },
+        {
+            id: 3,
+            eventType: 1,
+            commitType: 3,
+            title: {
+                uz: 'Prezident Farmoni inson manfaatlarini himoya qilishga qaratilgan',
+                uzc: 'Президент Фармони инсон манфаатларини ҳимоя қилишга қаратилган',
+                ru: 'Указ Президента направлен на защиту интересов человека'
+            },
+            descript: {
+                uz: '2020-yilning 20-mart kuni O‘zbekiston Respublikasi Oliy Majlisi Qonunchilik palatasida parlament a\'zolari, davlat hokimiyati va boshqaruvi organlari mas\'ul xodimlari, ommaviy axborot vositalari vakillari ishtirok etgan yig‘',
+                uzc: '2020-йилнинг 20-март куни Ўзбекистон Республикаси Олий Мажлиси Қонунчилик палатасида парламент аъзолари, давлат ҳокимияти ва бошқаруви органлари масъул ходимлари, оммавий ахборот воситалари вакиллари иштирок этган йиғ',
+                ru: '20 марта 2020 года в Законодательной палате Олий Мажлиса Республики Узбекистан состоялось собрание с участием депутатов парламента, ответственных работников органов государственной власти и управления, представителей средств массовой информации.'
+            },
+            date: '20.03.2023',
+            viewed: 64,
+            img: 'img3.jpg'
+        },
+        {
+            id: 4,
+            eventType: 2,
+            commitType: 1,
+            title: {
+                uz: 'Qo‘mita boshlang‘ich sinf o‘quvchilariga bepul ovqat berish tizimi yuzasidan mutasaddilarning axborotini eshitdi',
+                uzc: 'Қўмита бошланғич синф ўқувчиларига бепул овқат бериш тизими юзасидан мутасаддиларнинг ахборотини эшитди',
+                ru: 'Комитет заслушал информацию чиновников о системе бесплатного питания учащихся начальных классов.'
+            },
+            descript: {
+                uz: 'Senatning Fan, ta\'lim va sog‘liqni saqlash masalalari qo‘mitasi ishchi guruhi Qoraqalpog‘iston Respublikasi va Xorazm viloyatidagi umumiy o‘rta ta\'lim muassasalarida boshlang‘ich sinf o‘quvchilariga bepul ovqat berish tizimini',
+                uzc: 'Сенатнинг Фан, таълим ва соғлиқни сақлаш масалалари қўмитаси ишчи гуруҳи Қорақалпоғистон Республикаси ва Хоразм вилоятидаги умумий ўрта таълим муассасаларида бошланғич синф ўқувчиларига бепул овқат бериш тизимини',
+                ru: 'Рабочая группа Комитета Сената по вопросам науки, образования и здравоохранения предложила систему бесплатного питания учащихся начальных классов в общеобразовательных учреждениях Республики Каракалпакстан и Хорезмской области.'
+            },
+            date: '11.04.2023',
+            viewed: 205,
+            img: 'img4.jpg'
+        },
+        {
+            id: 5,
+            eventType: 2,
+            commitType: 5,
+            title: {
+                uz: 'Xalqaro munosabatlar, tashqi iqtisodiy aloqalar, xorijiy investisiyalar va turizm masalalari qo‘mitasining majlisi  bo‘lib o‘tdi',
+                uzc: 'Халқаро муносабатлар, ташқи иқтисодий алоқалар, хорижий инвестициялар ва туризм масалалари қўмитасининг мажлиси  бўлиб ўтди',
+                ru: 'Состоялось заседание комитета по международным отношениям, внешнеэкономическим связям, иностранным инвестициям и туризму'
+            },
+            descript: {
+                uz: '2023 yil 5 aprelь kuni Xalqaro munosabatlar, tashqi iqtisodiy aloqalar, xorijiy investisiyalar va turizm masalalari qo‘mitasining majlisi bo‘lib o‘tdi. Unda qator vazirlik va idoralar vakillari, ekspertlar va xalq deputatla',
+                uzc: '2023 йил 5 апрель куни Халқаро муносабатлар, ташқи иқтисодий алоқалар, хорижий инвестициялар ва туризм масалалари қўмитасининг мажлиси бўлиб ўтди. Унда қатор вазирлик ва идоралар вакиллари, экспертлар ва халқ депутатла',
+                ru: '5 апреля 2023 года состоялось заседание Комитета по международным отношениям, внешнеэкономическим связям, иностранным инвестициям и туризму. Присутствуют представители ряда министерств и ведомств, эксперты и народные депутаты.'
+            },
+            date: '05.04.2023',
+            viewed: 126,
+            img: 'img5.jpg'
+        },
+        {
+            id: 6,
+            eventType: 2,
+            commitType: 6,
+            title: {
+                uz: 'Yalpi majlis oldidan qonunlar dastlabki tarzda muhokama etildi',
+                uzc: 'Ялпи мажлис олдидан қонунлар дастлабки тарзда муҳокама этилди',
+                ru: 'Законы обсуждались в предварительном порядке перед пленарным заседанием'
+            },
+            descript: {
+                uz: '2023 yilning 4 aprelь kuni Senatning Fan, ta\'lim va sog‘liqni saqlash masalalari qo‘mitasining majlisi bo‘lib o‘tdi. Unda Qo‘mita a\'zolari, ekspertlar, vazirlik va idoralar rahbarlari hamda OAV vakillari ishtirok etdi. Majlisd',
+                uzc: '2023 йилнинг 4 апрель куни Сенатнинг Фан, таълим ва соғлиқни сақлаш масалалари қўмитасининг мажлиси бўлиб ўтди. Унда Қўмита аъзолари, экспертлар, вазирлик ва идоралар раҳбарлари ҳамда ОАВ вакиллари иштирок этди. Мажлисд',
+                ru: '4 апреля 2023 года состоялось заседание Комитета Сената по науке, образованию и здравоохранению. В нем приняли участие члены Комитета, эксперты, руководители министерств и ведомств, представители СМИ. Меджлис'
+            },
+            date: '04.04.2023',
+            viewed: 33,
+            img: 'img6.jpg'
+        },
+        {
+            id: 7,
+            eventType: 3,
+            commitType: 1,
+            title: {
+                uz: 'Senat Raisi Qashqadaryo viloyatining bir qator tuman va shaharlarida aholi bilan uchrashuvlar o‘tkazdi',
+                uzc: 'Сенат Раиси Қашқадарё вилоятининг бир қатор туман ва шаҳарларида аҳоли билан учрашувлар ўтказди',
+                ru: 'Председатель Сената провел встречи с жителями ряда районов и городов Кашкадарьинской области'
+            },
+            descript: {
+                uz: 'Joriy yilning 13-14 aprelь kunlari Oliy Majlis Senati Raisi Tanzila Narbaeva Qashqadaryo viloyatining Qarshi shahri, Qarshi va G‘uzor tumanlarida bo‘lib, mahalliy Kengash deputatlari, faollar, mahalla raislari, hokim yordamchilar',
+                uzc: 'Жорий йилнинг 13-14 апрель кунлари Олий Мажлис Сенати Раиси Танзила Нарбаева Қашқадарё вилоятининг Қарши шаҳри, Қарши ва Ғузор туманларида бўлиб, маҳаллий Кенгаш депутатлари, фаоллар, маҳалла раислари, ҳоким ёрдамчилар',
+                ru: '13-14 апреля текущего года Председатель Сената Олий Мажлиса Танзила Нарбаева посетила город Карши, Каршинский и Гузорский районы Кашкадарьинской области.'
+            },
+            date: '15.04.2023',
+            viewed: 42,
+            img: 'img7.jpg'
+        },
+        {
+            id: 8,
+            eventType: 3,
+            commitType: 3,
+            title: {
+                uz: 'Senat Raisi Navoiy viloyatida',
+                uzc: 'Сенат Раиси Навоий вилоятида',
+                ru: 'Председатель Сената находится в Навоийской области'
+            },
+            descript: {
+                uz: 'Joriy yilning 11-12 aprelь kunlari Oliy Majlis Senati Raisi Tanzila Narbaeva Navoiy viloyatining Qiziltepa, Navbahor tumanlari va Navoiy shahrida bo‘lib, aholi bilan muloqot qildi. Dastlab Senat Raisi Qiziltepa tumanining',
+                uzc: 'Жорий йилнинг 11-12 апрель кунлари Олий Мажлис Сенати Раиси Танзила Нарбаева Навоий вилоятининг Қизилтепа, Навбаҳор туманлари ва Навоий шаҳрида бўлиб, аҳоли билан мулоқот қилди. Дастлаб Сенат Раиси Қизилтепа туманининг',
+                ru: '11-12 апреля текущего года Председатель Сената Олий Мажлиса Танзила Нарбаева посетила Кызылтепинский, Навбахорский районы и город Навои Навоийской области и пообщалась с жителями. Первоначально председатель Сената Кизилтепинского района'
+            },
+            date: '13.04.2023',
+            viewed: 12,
+            img: 'img8.jpg'
+        },
+        {
+            id: 9,
+            eventType: 3,
+            commitType: 4,
+            title: {
+                uz: 'Ijtimoiy ahamiyatga molik loyihalarni amalga oshirishdagi hamkorlik',
+                uzc: 'Ижтимоий аҳамиятга молик лойиҳаларни амалга оширишдаги ҳамкорлик',
+                ru: 'Сотрудничество в реализации социально значимых проектов'
+            },
+            descript: {
+                uz: 'Joriy yilning 12 aprelь kuni Oliy Majlis Senatida Yoshlar, madaniyat va sport masalalari qo‘mitasi tomonidan Yoshlar parlamenti hamda Oliy Majlis huzuridagi Nodavlat notijorat tashkilotlarini va fuqarolik jamiyatning boshqa',
+                uzc: 'Жорий йилнинг 12 апрель куни Олий Мажлис Сенатида Ёшлар, маданият ва спорт масалалари қўмитаси томонидан Ёшлар парламенти ҳамда Олий Мажлис ҳузуридаги Нодавлат нотижорат ташкилотларини ва фуқаролик жамиятнинг бошқа',
+                ru: 'Joriy yilning 12 aprelь kuni Oliy Majlis Senatida Yoshlar, madaniyat va sport masalalari qo‘mitasi tomonidan Yoshlar parlamenti hamda Oliy Majlis huzuridagi Nodavlat notijorat tashkilotlarini va fuqarolik jamiyatning boshqa'
+            },
+            date: '12.04.2023',
+            viewed: 143,
+            img: 'img9.jpg'
+        },
+        {
+            id: 10,
+            eventType: 4,
+            commitType: 1,
+            title: {
+                uz: 'Sharqona Yangi yil — Navro‘zi olam muborak!',
+                uzc: 'Шарқона Янги йил — Наврўзи олам муборак!',
+                ru: 'Восточный Новый год - с Наврози!'
+            },
+            descript: {
+                uz: 'Navro‘z – o‘zaro qadr-qimmat, xayru saxovat, mehr-oqibat timsolidir. Ezgulik, sahovatga yo‘g‘irilgan uyg‘onish, yasharish ayyomi dillarimizni yanada quvonchu shodlikka chulg‘adi.Aziz yurtdoshlar! 21 mart – Navro‘z umumxalq bayrami',
+                uzc: 'Наврўз – ўзаро қадр-қиммат, хайру саховат, меҳр-оқибат тимсолидир. Эзгулик, саҳоватга йўғирилган уйғониш, яшариш айёми дилларимизни янада қувончу шодликка чулғади.Азиз юртдошлар! 21 март – Наврўз умумхалқ байрами',
+                ru: 'Новруз – это символ взаимного уважения, щедрости и доброты. Пробуждение доброты и великодушия наполнит наши сердца еще большей радостью и счастьем Дорогие соотечественники! 21 марта - национальный праздник Навруз'
+            },
+            date: '21.03.2023',
+            viewed: 256,
+            img: 'img10.jpg'
+        },
+        {
+            id: 11,
+            eventType: 5,
+            commitType: 3,
+            title: {
+                uz: 'Yordam so‘rab murojaat qilganning farzandiga  davolanish uchun imtiyozli yo‘llanma berildi',
+                uzc: 'Ёрдам сўраб мурожаат қилганнинг фарзандига  даволаниш учун имтиёзли йўлланма берилди',
+                ru: 'Ребенку лица, обратившегося за помощью, выдано льготное направление на лечение'
+            },
+            descript: {
+                uz: 'Oliy Majlis Senatining Agrar va suv xo‘jaligi masalalari qo‘mitasi raisi o‘rinbosari Risqul Siddiqov Jizzax viloyatida fuqarolarning murojaatlarini o‘rgandi.Jumladan, R.Siddiqov Senati Raisi T.Narbaevaga farzandini dav',
+                uzc: 'Олий Мажлис Сенатининг Аграр ва сув хўжалиги масалалари қўмитаси раиси ўринбосари Рисқул Сиддиқов Жиззах вилоятида фуқароларнинг мурожаатларини ўрганди.Жумладан, Р.Сиддиқов Сенати Раиси Т.Нарбаевага фарзандини дав',
+                ru: 'Заместитель председателя Комитета по аграрному и водному хозяйству Сената Олий Мажлиса Рискул Сиддиков изучил обращения граждан Джизакской области. В частности, Р.Сиддиков подарил своего ребенка Председателю Сената Т.Нарбаевой'
+            },
+            date: '29.03.2023',
+            viewed: 142,
+            img: 'img11.jpg'
+        },
+        {
+            id: 12,
+            eventType: 5,
+            commitType: 5,
+            title: {
+                uz: 'Sariosiyo tumanida 80-sonli umumta\'lim maktabining yangi binosi foydalanishga topshirildi',
+                uzc: 'Сариосиё туманида 80-сонли умумтаълим мактабининг янги биноси фойдаланишга топширилди',
+                ru: 'Сдан в эксплуатацию новый корпус общеобразовательной школы №80 в Сариосинском районе'
+            },
+            descript: {
+                uz: '2021 yilda Oliy Majlisi senatori  A.Sanginov Surxondaryo viloyati Sariosiyo tumani faollari va fuqarolari bilan uchrashgan edi. Unda “Gulobod” mahallasida joylashgan 80-sonli umumta\'lim maktabini kengaytirish masalasi',
+                uzc: '2021 йилда Олий Мажлиси сенатори  A.Сангинов Сурхондарё вилояти Сариосиё тумани фаоллари ва фуқаролари билан учрашган эди. Унда “Гулобод” маҳалласида жойлашган 80-сонли умумтаълим мактабини кенгайтириш масаласи',
+                ru: 'В 2021 году сенатор Олий Мажлиса А. Сангинов встретился с активом и жителями Сариосийского района Сурхандарьинской области. Речь идет о расширении общеобразовательной школы №80, расположенной в микрорайоне «Гулобод».'
+            },
+            date: '24.02.2023',
+            viewed: 215,
+            img: 'img12.jpg'
+        },
+        {
+            id: 13,
+            eventType: 5,
+            commitType: 4,
+            title: {
+                uz: 'Senator ishtirokidagi navbatdagi fuqarolar qabuli',
+                uzc: 'Сенатор иштирокидаги навбатдаги фуқаролар қабули',
+                ru: 'Очередной прием граждан с участием сенатора'
+            },
+            descript: {
+                uz: '2023 yil 9 fevralь kuni Senat binosida Fan, ta\'lim va sog‘liqni saqlash masalalari qo‘mitasi raisi O.Iminov fuqarolar qabulini o‘tkazdi. Unda Jizzax, Farg‘ona, Toshkent, Samarqand, Surxondaryo, Qashqadaryo viloyatilari va Toshkent sh',
+                uzc: '2023 йил 9 февраль куни Сенат биносида Фан, таълим ва соғлиқни сақлаш масалалари қўмитаси раиси О.Иминов фуқаролар қабулини ўтказди. Унда Жиззах, Фарғона, Тошкент, Самарқанд, Сурхондарё, Қашқадарё вилоятилари ва Тошкент ш',
+                ru: '9 февраля 2023 года председатель Комитета по науке, образованию и здравоохранению О.Иминов провел прием для граждан в здании Сената. В него входят Джизакская, Ферганская, Ташкентская, Самаркандская, Сурхандарьинская, Кашкадарьинская области и г. Ташкент.'
+            },
+            date: '09.02.2023',
+            viewed: 6,
+            img: 'img13.jpg'
+        },
+        {
+            id: 14,
+            eventType: 3,
+            commitType: 2,
+            title: {
+                uz: 'Senat Raisi Buxoroda jamoatchilik vakillari bilan uchrashdi',
+                uzc: 'Сенат Раиси Бухорода жамоатчилик вакиллари билан учрашди',
+                ru: 'Председатель Сената встретился с представителями общественности Бухары'
+            },
+            descript: {
+                uz: 'Joriy yilning 10-11 aprelь kunlari Oliy Majlis Senati Raisi Tanzila Narbaeva Buxoro viloyatining qator hududlari xususan,  Buxoro shahri, Buxoro, Romitan va Olot tumanlarida amaliy tashrif bilan bo‘ldi. U yerda mahalliy Ke',
+                uzc: 'Жорий йилнинг 10-11 апрель кунлари Олий Мажлис Сенати Раиси Танзила Нарбаева Бухоро вилоятининг қатор ҳудудлари хусусан,  Бухоро шаҳри, Бухоро, Ромитан ва Олот туманларида амалий ташриф билан бўлди. У ерда маҳаллий Ке',
+                ru: '10-11 апреля текущего года Председатель Сената Олий Мажлиса Танзила Нарбаева совершила практическую поездку в ряд районов Бухарской области, в частности, город Бухара, Бухарский, Ромитанский и Олотский районы. Местный Ке там'
+            },
+            date: '11.04.2023',
+            viewed: 48,
+            img: 'img14.jpg'
         }
     ]
 })

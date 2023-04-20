@@ -2,7 +2,7 @@
 
 .breadcrumb_section {
   width: 100%;
-  height: 280px;
+  height: 320px;
   background: $colorBlue;
   padding: 60px;
   box-sizing: border-box;
@@ -26,7 +26,7 @@
   }
 
   .breadcrumb_container {
-    width: calc(60% - 24px);
+    width: calc(80% - 24px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +40,7 @@
         line-height: 150%;
         font-weight: 600;
         color: $colorWhite;
+        text-align: center;
       }
     }
 
@@ -63,6 +64,11 @@
       p {
         color: $colorWhite;
         opacity: 0.6;
+
+        &.oldPage{
+          opacity: 0.6;
+          cursor: pointer;
+        }
       }
 
       span {

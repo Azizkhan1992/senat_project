@@ -1,8 +1,10 @@
 <template>
     <div class="active_news">
-        <nuxt-link class="active_news_items" data-aos="flip-right" data-aos-easing="ease-in-quart" data-aos-duration="400" to="#" v-for="item in news" :key="item.id">
+        <a-row type="flex" :gutter="[24, 24]">
+            <a-col :xs="24" :sm="24" :lg="8" :xl="8" :xxl="8" v-for="(item, idx) in news" :key="item.id">
+                <nuxt-link class="active_news_items" data-aos="flip-right" data-aos-easing="ease-in-quart" :data-aos-duration="duration[idx]" :to="`/events/${item.id}`" >
             <div class="news_img_wrapper">
-                <img :src="require('../../static/images/'+item.img)" alt="">
+                <img :src="require('../../static/images/events/'+item.img)" alt="">
             </div>
 
             <div class="news_details_wrapper">
@@ -11,10 +13,12 @@
 
                 <div class="news_date">
                     <font-awesome-icon :icon="['far', 'clock']" />
-                    <span class="commonP">{{ item.date?.[$i18n.locale] }}</span>
+                    <span class="commonP">{{ item.date }}</span>
                 </div>
             </div>
         </nuxt-link>
+            </a-col>
+        </a-row>
     </div>
 </template>
 <script>
@@ -22,7 +26,8 @@ export default {
     name: 'active-news',
     data(){
         return{
-            news: this.$store.state.news
+            news: this.$store.state.events.slice(0, 3),
+            duration: [200, 500, 800]
         }
     }
 }

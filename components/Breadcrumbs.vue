@@ -10,13 +10,19 @@
 
                 <p class="descP">{{ sectionName?.[$i18n.locale] }}</p>
 
-                <span>/</span>
+                <span v-if="sectionName && pageName !== null">/</span>
 
-                <p class="descBl">{{ pageName?.[$i18n.locale] }}</p>
+                <p v-if="isInner == false" class="descBl">{{ pageName?.[$i18n.locale] }}</p>
+
+                <p v-else class="descBl" :class="isInner == true ? 'oldPage' : ''" @click="goBack">{{ pageName?.[$i18n.locale] }}</p>
+
+
+                <p v-if="!isInner" class="descBl">{{ innerPage?.[$i18n.locale] }}</p>
             </div>
-
             <div class="active_page_name">
-                <h2>{{ pageName?.[$i18n.locale] }}</h2>
+                <h2 v-if="pageName === null">{{ sectionName?.[$i18n.locale] }}</h2>
+                <h2 v-if="isInner == false">{{ pageName?.[$i18n.locale] }}</h2>
+                <h2 v-else>{{ innerPage?.[$i18n.locale] }}</h2>
             </div>
         </div>
     </section>
@@ -31,7 +37,15 @@ export default {
         },
         pageName: {
             type: Object,
+            default: () => null
+        },
+        innerPage: {
+            type: Object,
             default: () => {}
+        },
+        isInner: {
+            type: Boolean,
+            default: false
         }
     },
     data(){
@@ -41,6 +55,11 @@ export default {
                 uzc: 'Бош саҳифа',
                 ru: 'Домашняя страница'
             }
+        }
+    },
+    methods: {
+        goBack(){
+            this.$router.go(-1)
         }
     }
 }

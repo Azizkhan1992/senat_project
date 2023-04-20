@@ -1,39 +1,278 @@
-
-.committees_page{
-    margin: 0;
-    padding: 0;
+.committees_page {
+  margin: 0;
+  padding: 0;
 }
 
-.committees_section{
-    position: relative;
-    margin-top: -50px;
-    z-index: 9;
+.committees_section {
+  position: relative;
+  margin-top: -50px;
+  z-index: 9;
 
-    .committees_container{
+  .committees_container {
+    .committees_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 32px;
 
-        .committees_wrapper{
+      .committe_items {
+        width: calc(33% - 24px);
+        height: 148px;
+        padding: 20px;
+        box-sizing: border-box;
+        background: $colorWhite;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        color: $colorBlue;
+
+        h3 {
+          color: $colorBlue;
+        }
+      }
+    }
+  }
+}
+
+// Committees Inner Page Start
+
+.committees_inner_page {
+  margin: 0;
+  padding: 0;
+}
+
+.committeess_inner_section {
+  position: relative;
+  margin-top: -68px;
+  z-index: 19;
+
+  .committees_inner_container {
+    .committees_inner_header {
+      display: flex;
+      justify-content: space-between;
+
+      .header_items{
+        width: fit-content;
+        padding: 12px;
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 2px;
+        cursor: pointer;
+
+        &.active{
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid $colorWhite;
+        }
+
+        h3{
+            color: $colorWhite;
+        }
+      }
+    }
+
+    .committees_inner_wrapper{
+        margin-top: 48px;
+
+        .active_members_container{
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
             row-gap: 32px;
 
-            .committe_items{
-                width: calc(33% - 24px);
-                height: 148px;
-                padding: 20px;
+            .member_items{
+                padding: 24px;
                 box-sizing: border-box;
-                background: $colorWhite;
                 box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+                background: $colorWhite;
                 border-radius: 4px;
                 display: flex;
+                column-gap: 24px;
                 align-items: center;
-                column-gap: 16px;
-                color: $colorBlue;
 
-                h3{
-                    color: $colorBlue;
+                .member_items_details{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 6px;
+
+                    h4{
+                        color: $colorBlue;
+                    }
+
+                    p{
+                        color: $textColorGr1;
+                    }
+                }
+
+                .member_image_wrapper{
+                    width: 186px;
+                    height: 220px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+
+        .committees_charter_container{
+            width: 100%;
+
+            .charter_wrapper{
+                width: 100%;
+                min-height: 420px;
+                padding: 24px;
+                box-sizing: border-box;
+                box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+
+            p{
+                opacity: 0.8;
+            }
+            }
+        }
+
+        .committees_plan_container{
+            width: 100%;
+            min-height: 420px;
+            box-sizing: border-box;
+                box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .committee_activity_container{
+            width: 100%;
+
+            .activity_wrapper{
+                width: 100%;
+                min-height: 420px;
+                box-sizing: border-box;
+                box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 24px;
+
+                .activity_items{
+                    padding-bottom: 16px;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid $borderC3;
+
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+
+                    p{
+                        font-weight: 600;
+                        color: $colorBlue;
+                    }
+                }
+            }
+        }
+
+        .committee_monitoring_container{
+            width: 100%;
+
+            .monitoring_wrapper{
+                min-height: 420px;
+                box-sizing: border-box;
+                box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 24px;
+
+                .monitoring_items{
+                    padding-bottom: 16px;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid $borderC3;
+
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+
+                    p{
+                        font-weight: 600;
+                        color: $colorBlue;
+                    }
+                }
+            }
+        }
+
+        .commit-events-section{
+
+            .event-items{
+
+                .event-image_wrapper{
+                    height: 240px;
+                    position: relative;
+                    outline: 4px solid rgba(76, 76, 255, 75%);
+                    outline-offset: -16px;
+                    overflow: hidden;
+                    isolation: isolate;
+
+                    &:hover{
+
+                        img{
+                            transform: scale(1.35);
+                        }
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        transition: transform 0.24s;
+                        z-index: -1;
+                    }
+                }
+
+                .event_details{
+                    margin-top: 12px;
+
+                    h3{
+                        font-size: 1.25rem;
+                        line-height: 150%;
+                        font-weight: 700;
+                        color: $textColorBl;
+                    }
+
+                    p{
+                        font-size: 1.15rem;
+                        line-height: 150%;
+                        font-weight: 400;
+                        color: $textColorGr;
+                    }
+
+                    .detail-header{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: $colorBlue;
+                        font-size: 1rem;
+                        line-height: 140%;
+                        font-weight: 500;
+
+                        div{
+                            display: flex;
+                            align-items: center;
+                            column-gap: 6px;
+                            color: $colorBlue;
+                        }
+                    }
                 }
             }
         }
     }
+  }
 }
+
+// Committees Inner Page End

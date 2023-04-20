@@ -165,9 +165,14 @@
       }
 
       .header_center_logo{
-        column-gap: 16px;
 
-        .logo_title{
+        a{
+          display: flex;
+          align-items: center;
+          column-gap: 12px;
+
+
+          .logo_title{
             display: flex;
             flex-direction: column;
             row-gap: 4px;
@@ -181,6 +186,7 @@
                 margin: 0;
                 text-transform: uppercase;
             }
+        }
         }
       }
     }

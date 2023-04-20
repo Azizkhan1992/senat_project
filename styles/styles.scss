@@ -5,6 +5,7 @@
 @import './components/customs.scss';
 @import './components/leaders.scss';
 @import './components/committees.scss';
+@import './components/events.scss';
 
 
 @font-face {
@@ -124,7 +125,8 @@ body{
 // Buttons End
 
 .commonContent{
-    width: 1720px;
+    width: 100%;
+    max-width: 1748px;
     margin: 0 auto;
 }
 
@@ -160,9 +162,15 @@ body{
     justify-content: center;
 }
 
-@media screen and (max-width: 1560px) and (min-width: 1060px) {
+@media only screen and (max-width: 1748px) {
     .commonContent{
-        width: 1020px;
+        max-width: 1548px;
+    }
+}
+
+@media only screen and (max-width: 1560px) {
+    .commonContent{
+        max-width: 1140px;
     }
 
     .commonP{
@@ -178,14 +186,20 @@ body{
     }
 }
 
-@media screen and (max-width: 1060px) and (min-width: 760px) {
+@media only screen and (max-width: 1199px) {
     .commonContent{
-        width: 720px;
+        max-width: 960px;
     }
 }
 
-@media screen and (max-width: 760px) {
+@media only screen and (max-width: 899px) {
     .commonContent{
-        width: 300px;
+        max-width: 460px;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .commonContent{
+        max-width: 300px;
     }
 }

@@ -302,21 +302,13 @@
     .news_wrapper {
       height: 410px;
       margin-top: 24px;
-
-      .ant-col {
-        padding: 12px;
-        box-sizing: border-box;
-      }
     }
 
     .active_news {
       width: 100%;
-      display: flex;
-      column-gap: 24px;
     }
 
     .active_news_items {
-      width: 360px;
       display: flex;
       flex-direction: column;
       row-gap: 16px;
@@ -365,6 +357,7 @@
         }
 
         img {
+          width: 100%;
           height: 100%;
           object-fit: cover;
           transition: 0.18s linear;

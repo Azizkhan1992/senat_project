@@ -26,9 +26,6 @@ export default {
         return{
             committees: this.$store.state.committess
         }
-    },
-    mounted(){
-        console.log(this.committees)
     }
 }
 </script>

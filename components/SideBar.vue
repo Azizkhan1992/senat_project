@@ -4,13 +4,14 @@
             <div class="sidebar_header">
                 <h3 class="descT">{{ activeSubmenu?.name?.[$i18n.locale] }}</h3>
             </div>
-            
+
             <div class="sidebar_content">
-                <ul class="sidebar_items" :class="item.link == activeMenu.link ? 'active' : ''" v-for="item in activeSubmenu?.subMenu" :key="item.id">
-                <li>
-                    <h4 class="descP" >{{ item.name?.[$i18n.locale] }}</h4>
-                </li>
-            </ul>
+                <ul class="sidebar_items" :class="item?.link == activeMenu?.link ? 'active' : ''"
+                    v-for="item in activeSubmenu?.subMenu" :key="item.id">
+                    <li>
+                        <h4 class="descP">{{ item.name?.[$i18n.locale] }}</h4>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -18,34 +19,63 @@
 <script>
 export default {
     name: 'side-bar',
-    data(){
-        return{
+    data() {
+        return {
             menus: this.$store.state.menus,
             activeMenu: null,
             activeId: null,
             activeSubmenu: null
         }
     },
-    mounted(){
+    mounted() {
         this.getSidebarItems()
     },
     methods: {
-        getSidebarItems(){
-        let route = this.$route.path.split('/').pop()
+        getSidebarItems() {
+            let fullRoute = this.$route.path.split('/'),
+                route = this.$route.path.split('/').pop(),
 
-        this.menus.forEach(element => {
-            if(element.subMenu){
-                element.subMenu.forEach(elem => {
-                    if(elem.link == route){
-                        this.activeMenu = elem
-                        this.activeId = elem.id
-                        this.activeSubmenu = element
-                    }
-                })
-            }
-        });
+                innerRoute = fullRoute[1]
 
-    }
+            this.menus.forEach(element => {
+                if (element.subMenu) {
+                    element?.subMenu.forEach(elem => {
+                        if (elem.link == fullRoute[fullRoute.length - 1]) {
+                            this.activeMenu = elem
+                            this.activeId = elem.id
+                            this.activeSubmenu = element
+                        } else if (element.type === 'section'){
+                            this.activeSubmenu = element
+                            element.subMenu.forEach(elem => {
+                                if(elem.link.split('/').pop() === this.$route.params.id){
+                                    this.activeMenu = elem
+                                }
+                            })
+                        }
+                        
+                        else {
+                            this.menus.forEach(element => {
+                                if (element.subMenu) {
+                                    element.subMenu.forEach(elem => {
+                                        if (elem.link == innerRoute) {
+                                            this.activeMenu = elem
+                                            this.activeId = elem.id
+                                            this.activeSubmenu = element
+                                        }
+                                    })
+                                }
+                            });
+                        }
+                    })
+
+                    // if(element.type === 'section'){
+                    //     this.activeSubmenu = element
+                    // }
+                }
+            });
+
+
+        }
     }
 }
 </script>
