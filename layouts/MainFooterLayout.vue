@@ -32,33 +32,28 @@
             <div class="footer-content commonContent">
                 <div class="footer_links">
                     <div class="link_items" v-for="item in footer_links" :key="item.id">
-                    <nuxt-link class="descP" to="#">{{ item.name?.[$i18n.locale] }}</nuxt-link>
+                        <nuxt-link class="descP" to="#">{{ item.name?.[$i18n.locale] }}</nuxt-link>
                     </div>
                 </div>
 
                 <div class="footer_content_details">
                     <div class="footer_contacts">
-                        <div class="contact_phone_one">
-                            <div class="phone_title_wrapper">
-                                <font-awesome-icon :icon="['fasr', 'phone']" />
-                            <span class="commonP">{{ $t('footer_phone_one') }}:</span>
+                        <div class="contact_phones">
+                            <div class="phone__wrapper" v-for="phone in contacts.phone" :key="phone.id">
+                                <div class="phone_title_wrapper">
+                                    <font-awesome-icon :icon="['fasr', 'phone']" />
+                                    <span class="commonP">{{ phone?.title }}:</span>
+                                </div>
+                                <a :href="`tel: ${phone.value}`" class="descP">{{ phone.value }}</a>
                             </div>
-                            <p class="descP">{{ contacts.phone1 }}</p>
-                        </div>
-                        <div class="contact_phone_two">
-                            <div class="phone_title_wrapper">
-                                <font-awesome-icon :icon="['fasr', 'phone']" />
-                            <span class="commonP">{{ $t('footer_phone_two') }}:</span>
-                            </div>
-                            <p class="descP">{{ contacts.phone2 }}</p>
                         </div>
 
                         <div class="contact_address">
                             <div class="phone_title_wrapper">
                                 <font-awesome-icon :icon="['fasr', 'location-dot']" />
-                            <span class="commonP">{{ $t('address') }}:</span>  
+                                <span class="commonP">{{ $t('address') }}:</span>
                             </div>
-                            <p class="descP">{{ contacts.address }}</p>
+                            <p class="descP" v-for="address in contacts.address" :key="address.id">{{ address.text }}</p>
                         </div>
                     </div>
 
@@ -187,7 +182,15 @@ export default {
                     }
                 }
             ],
-            contacts: this.$store.state.contacts
+            contacts: {}
+        }
+    },
+    mounted() {
+        this.getContacts()
+    },
+    methods: {
+        async getContacts() {
+            this.contacts = await this.$store.dispatch('getContacts')
         }
     }
 }

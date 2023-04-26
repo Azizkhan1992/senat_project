@@ -2,7 +2,8 @@
     <section class="assembly_section">
         <div class="assembly_container commonContent">
             <div class="assemblies_wrapper">
-                <a-col :span="12">
+                <a-row type="flex" :gutter="[6, 6]">
+                    <a-col :span="12">
                     <div class="active_assembly_wrapper" data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-quad">
                         <div class="active_assembly_details">
                             <div class="details_top">
@@ -47,6 +48,7 @@
                         </nuxt-link>
                     </div>
                 </a-col>
+                </a-row>
             </div>
         </div>
     </section>

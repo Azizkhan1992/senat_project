@@ -1,0 +1,20 @@
+@media only screen and (max-width: 1720px) {
+    .Interactive_section{
+
+        .Interactive_container{
+            height: 580px;
+
+            .Interactive_wrapper{
+                height: 420px;
+
+                .Interactive_services{
+                    
+
+                    a{
+                        flex: 0 0 45%;
+                    }
+                }
+            }
+        }
+    }
+}

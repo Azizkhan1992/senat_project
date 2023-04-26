@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './responsives/index.scss';
 @import './components/home_header.scss';
 @import './components/home.scss';
 @import './components/footer.scss';
@@ -162,13 +163,13 @@ body{
     justify-content: center;
 }
 
-@media only screen and (max-width: 1748px) {
+@media only screen and (min-width: 1720px) {
     .commonContent{
         max-width: 1548px;
     }
 }
 
-@media only screen and (max-width: 1560px) {
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .commonContent{
         max-width: 1140px;
     }
@@ -178,7 +179,7 @@ body{
     }
 
     .descP{
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .descT{
@@ -186,20 +187,36 @@ body{
     }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (min-width: 990px) and (max-width: 1200px) {
     .commonContent{
         max-width: 960px;
     }
-}
 
-@media only screen and (max-width: 899px) {
-    .commonContent{
-        max-width: 460px;
+    .descP{
+        font-size: 0.75rem;
+    }
+
+    .descT{
+        font-size: 1rem;
     }
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (min-width: 576px) and (max-width: 990px) {
     .commonContent{
-        max-width: 300px;
+        max-width: 520px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .commonContent{
+        max-width: calc(100% - 48px);
+    }
+
+    .mainP{
+        font-size: 1.25rem;
+    }
+
+    .descBl{
+        font-size: 0.85rem;
     }
 }

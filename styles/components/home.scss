@@ -9,17 +9,19 @@
 .news_tabs_wrapper {
   height: 590px;
   display: flex;
+  flex-flow: wrap;
   flex-direction: row-reverse;
 
   .tabs_details {
-    width: 1136px;
+    height: 100%;
+    flex: 0 0 60%;
 
     .tab_wrapper_item {
       height: 100%;
     }
 
     .tab_container {
-      width: 1136px;
+      width: 100%;
       height: 100%;
     }
 
@@ -30,7 +32,9 @@
 
       img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
+        transition: 0.12s linear;
 
         &:hover {
           transform: scale(1.15);
@@ -41,6 +45,7 @@
 }
 
 .tabs_header {
+  flex: 0 0 40%;
   height: 100%;
   ul {
     height: 100%;
@@ -235,7 +240,7 @@
     row-gap: 32px;
 
     a {
-      width: 550px;
+      width: calc(30% - 12px);
       height: 112px;
       display: flex;
       align-items: center;
@@ -262,7 +267,7 @@
 
 .Interactive_wrapper {
   width: 100%;
-  height: 320px;
+  height: 360px;
 }
 
 // Interactive Services End
@@ -285,7 +290,7 @@
   margin-top: 120px;
 
   .home_news_container {
-    height: 490px;
+    height: fit-content;
 
     .news_header {
       a {
@@ -300,7 +305,7 @@
     }
 
     .news_wrapper {
-      height: 410px;
+      height: fit-content;
       margin-top: 24px;
     }
 
@@ -394,6 +399,7 @@
       flex-direction: column;
 
       .tag_news_items {
+        max-height: 160px;
         padding: 20px 0;
         box-sizing: border-box;
         border-bottom: 1px solid $borderC;
@@ -532,11 +538,19 @@
     }
 
     .Img_wrapper {
+      width: calc(50% - 12px);
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+      }
 
       &::after {
         content: "";
@@ -547,6 +561,7 @@
         top: 0;
         background: rgba(0, 0, 0, 0.3);
         z-index: 1;
+        border-radius: 4px;
       }
 
       .circle_play {
@@ -996,12 +1011,10 @@
   }
 
   .statistics_details {
+    width: 100% ;
     margin-top: 24px;
-    display: flex;
-    justify-content: space-between;
 
     .statistics_items {
-      width: calc(25% - 24px);
       padding: 24px;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.1);
@@ -1039,8 +1052,8 @@
       margin-top: 24px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       row-gap: 32px;
+      column-gap: 32px;
 
       .article_items {
         width: calc(25% - 24px);
@@ -1380,6 +1393,10 @@
 
 .useful_links_section{
     margin-top: 120px;
+
+    .usefull__links__slider{
+      display: none;
+    }
 
     .link_details{
         margin-top: 24px;

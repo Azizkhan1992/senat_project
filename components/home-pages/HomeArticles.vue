@@ -8,13 +8,13 @@
             </div>
 
             <div class="articles_wrapper">
-                <nuxt-link to="#" data-aos="flip-left" :data-aos-duration="`${duration[idx]}`"
+                <nuxt-link :to="`/articles/${article?.slug}`" data-aos="flip-left" :data-aos-duration="`${duration[idx]}`"
                     data-aos-easing="ease-out-cubic" class="article_items" v-for="(article, idx) in articles" :key="idx">
-                    <h3 class="descP">{{ article.title?.[$i18n.locale] }}</h3>
+                    <h3 class="descP">{{ article?.title }}</h3>
 
                     <div class="article_date_wrapper">
                         <font-awesome-icon :icon="['far', 'clock']" />
-                        <span class="commonP">{{ article.date?.[$i18n.locale] }}</span>
+                        <span class="commonP">{{ article?.pub_date }}</span>
                     </div>
                 </nuxt-link>
             </div>
@@ -26,10 +26,18 @@ export default {
     name: 'home-articles',
     data() {
         return {
-            articles: this.$store.state.homeArticles,
+            articles: [],
             duration: [100, 400, 700, 1000,
                 100, 400, 700, 1000
             ]
+        }
+    },
+    mounted(){
+        this.getArticles()
+    },
+    methods: {
+        async getArticles(){
+            this.articles = await this.$store.dispatch('getHomeArticles')
         }
     }
 }

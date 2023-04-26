@@ -11,14 +11,14 @@
 
             <div class="news_wrapper">
                 <a-row type="flex" :gutter="[24, 24]" justify="space-between">
-                    <a-col :xs="24" :sm="24" :lg="18" :xl="18" :xxl="18">
+                    <a-col :xs="24" :sm="24" :lg="24" :xl="18" :xxl="18">
                         <div class="active_news_wrapper news">
-                            <ActiveNews/>
+                            <ActiveNews v-if="activeNews?.length>0" :news="activeNews"/>
                         </div>
                     </a-col>
-                    <a-col :xs="24" :sm="24" :lg="6" :xl="6" :xxl="6">
+                    <a-col :xs="24" :sm="24" :lg="24" :xl="6" :xxl="6">
                         <div class="tag_news_wrapper news">
-                            <TagNews/>
+                            <TagNews v-if="tagNews?.length>0" :news="tagNews"/>
                         </div>
                     </a-col>
                 </a-row>
@@ -31,6 +31,25 @@ import ActiveNews from './ActiveNews.vue';
 import TagNews from './TagNews.vue';
 export default {
     name: 'home-news',
-    components: {ActiveNews, TagNews}
+    components: {ActiveNews, TagNews},
+    data(){
+        return{
+            allNews: [],
+            activeNews: [],
+            tagNews: []
+        }
+    },
+    mounted(){
+        this.getEvents()
+    },
+    methods: {
+        async getEvents(){
+            this.allNews = await this.$store.dispatch('getHomeEvents')
+            if(this.allNews?.length>0){
+                this.activeNews = this.allNews.slice(0, 3)
+            this.tagNews = this.allNews.slice(3, this.allNews.length)
+            }
+        }
+    }
 }
 </script>

@@ -1,0 +1,100 @@
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    // Header Start
+    .header{
+        .navigation{
+            .navigation_content{
+
+                .navigation_wrapper{
+
+                    .navItems{
+
+                        .navItem{
+
+                            p{
+                                font-size: 0.85rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Header End
+
+
+    .home_news_section{
+
+        .home_news_container{
+
+            .news_wrapper{
+
+                .active_news_wrapper{
+
+                    .active_news{
+
+                        .active_news_items{
+
+                            .news_details_wrapper{
+                                h3{
+                                    font-size: 1.15rem;
+                                }
+
+                                p{
+                                    font-size: 0.85rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .tag_news_wrapper{
+
+                    .tag_news{
+                        
+
+                        .tag_details{
+                            width: calc(50% - 12px);
+                        }
+
+                        .tag_news_items{
+
+                            .tag_img_wrapper{
+                                flex: 0 0 50%;
+                                width: calc(50% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .map_section{
+
+        .interactive_map_container{
+
+            .map_tabs{
+
+                .map_district_wrapper{
+
+                    .map_items{
+                        svg{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner_section{
+
+        .banner_container{
+
+            &::after{
+                width: 70% !important;
+            }
+        }
+    }
+}

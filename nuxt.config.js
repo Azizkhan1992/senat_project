@@ -27,7 +27,7 @@ export default {
   plugins: [
     '@/plugins/antd-ui',
     '@/plugins/fontawesome.js',
-    // { src: '~/plugins/aos', mode: 'client' },
+    { src: '~/plugins/axios', mode: 'client' },
     '~/plugins/aos.client.js',
   ],
 
@@ -36,7 +36,12 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/dotenv'
   ],
+
+  // env: {
+  //   baseURL: process.env.BASE_URL || 'https://senat.uz/api/v1/site/'
+  // },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -80,8 +85,13 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
-  },
+    baseURL: process.env.BASE_URL,
+  //   headers: {
+  //     common: {
+  //       'Accept-Language': this.i18n.locale
+  //     },
+  // },
+},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

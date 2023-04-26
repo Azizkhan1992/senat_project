@@ -6,7 +6,7 @@
                     <p class="commonP content_left-hour">{{ hour }} : {{ minut }}</p>
 
                     <p v-if="day !== null" class="commonP content_left-date">{{ day[$i18n.locale] }}, {{ date }} {{
-                        month[$i18n.locale] }} {{ year}} (GMT+5)</p>
+                        month[$i18n.locale] }} {{ year }} (GMT+5)</p>
                 </div>
 
                 <div class="content_center df-cen">
@@ -33,12 +33,12 @@
                 <div class="header_center_logo df-cen">
                     <nuxt-link to="/">
                         <div class="logo_img ImgWr">
-                        <img src="../static/images/sign.png" alt="">
-                    </div>
-                    <div class="logo_title">
-                        <h1 class="descP">{{ $t("UZB") }}</h1>
-                        <h3 class="descT">{{ $t("senat") }}</h3>
-                    </div>
+                            <img src="../static/images/sign.png" alt="">
+                        </div>
+                        <div class="logo_title">
+                            <h1 class="descP">{{ $t("UZB") }}</h1>
+                            <h3 class="descT">{{ $t("senat") }}</h3>
+                        </div>
                     </nuxt-link>
                 </div>
                 <div class="center_right_content">
@@ -88,15 +88,26 @@
 
         </div>
 
-        <NavigationBar />
+        <div class="home__navbar">
+            <div class="home__navbar__wrapper commonContent">
+                <div class="ImgWr">
+                    <img src="../static/images/list.png" alt="" @click="isNav = true">
+                </div>
+                <NavigationBar v-if="menus?.length>0" :all-menus="menus" />
+                <NavBarPopup v-if="menus?.length>0" :all-menus="menus" @navDeactive="navDeactive" :class="isNav ? 'active' : 'deactive'"/>
+                <MobileNavbar v-if="menus?.length>0" :all-menus="menus" @navDeactive="navDeactive" :class="isNav ? 'active' : 'deactive'"/>
+            </div>
+        </div>
     </header>
 </template>
 <script>
 import NavigationBar from '~/components/NavigationBar.vue'
 import Icons from '../components/Icons.vue'
+import NavBarPopup from '~/components/NavBarPopup.vue'
+import MobileNavbar from '~/components/MobileNavbar.vue'
 export default {
     name: 'app-header',
-    components: { Icons, NavigationBar },
+    components: { Icons, NavigationBar, NavBarPopup, MobileNavbar },
     data() {
         return {
             socials: this.$store.state.socials,
@@ -239,10 +250,13 @@ export default {
                 }
             ],
             selectedLang: { language: 'Ўзбек' },
-            isLang: false
+            isLang: false,
+            isNav: false,
+            menus: []
         }
     },
     mounted() {
+        this.getMenus()
         this.getDay()
     },
     computed: {
@@ -251,6 +265,9 @@ export default {
         }
     },
     methods: {
+        async getMenus(){
+            this.menus = await this.$store.dispatch('getMenus')
+        },
         selectLang(lang) {
             this.selectedLang = lang
         },
@@ -277,6 +294,9 @@ export default {
 
         getMonth(month) {
             this.month = this.months.filter(e => e.id === month + 1).pop()
+        },
+        navDeactive(){
+            this.isNav = false
         }
     }
 }

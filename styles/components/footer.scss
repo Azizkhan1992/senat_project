@@ -143,8 +143,14 @@
             }
           }
 
-          p {
+          a, p {
             color: $colorWhite;
+          }
+
+          .contact_phones{
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
           }
         }
 

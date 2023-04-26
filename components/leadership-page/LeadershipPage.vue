@@ -4,14 +4,15 @@
             <a-row>
                 <a-col :span="17">
                 <div class="leaders_wrapper">
-                    <nuxt-link :to="`${leader.id}`" class="leaders" v-for="leader in leaders" :key="leader.id">
+                    <nuxt-link :to="`/senators/${leader.id}`" class="leaders" v-for="leader in leaders" :key="leader.id">
                         <div class="leader_image_wrapper">
-                            <img :src="require('../../static/images/senat/'+leader.img)" alt="">
+                            <img v-if="leaders?.avatar" :src="leaders?.avatar" alt="">
+                            <img v-else src="../../static/images/person.svg" alt="">
                         </div>
 
                         <div class="leader_details">
-                            <h3 class="mainP">{{ leader.name?.[$i18n.locale] }}</h3>
-                            <p class="descP">{{ leader.step?.[$i18n.locale] }}</p>
+                            <h3 class="mainP">{{ leader?.full_name }}</h3>
+                            <p class="descP">{{ leader?.work_place }}</p>
                         </div>
                     </nuxt-link>
                 </div>
@@ -30,12 +31,17 @@ export default {
     components: {SideBar},
     data(){
         return{
-            leaders: this.$store.state.leaders,
+            leaders: [],
         }
     },
-    created(){
+    mounted(){
+        this.getLeaders()
     },
     methods: {
+        async getLeaders(){
+            this.leaders = await this.$store.dispatch('getSenatLeaders')
+            console.log(this.leaders)
+        },
         getActivePages(){
             let activeId = this.$route.query.id
             this.activeMenu = this.menus.filter(e => e.id == activeId)[0].subMenu

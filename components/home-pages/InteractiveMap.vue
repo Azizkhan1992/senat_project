@@ -7,24 +7,28 @@
                 <a-tabs default-active-key="1" @change="callback">
                     <a-tab-pane key="1" :tab="$t('by_district')">
                         <div class="map_district_container">
-                            <a-col :span="16">
+                            <a-row type="flex" :gutter="[12, 12]">
+                                <a-col :xs="24" :sm="24" :lg="16" :xl="17" :xxl="17">
                                 <div class="map_district_wrapper">
                                     <DistrictsMap/>
                                 </div>
                             </a-col>
-                            <a-col :span="8">
+                            <a-col :xs="24" :sm="24" :lg="8" :xl="7" :xxl="7">
                                 <Senators/>
                             </a-col>
+                            </a-row>
                         </div>
                     </a-tab-pane>
                     <a-tab-pane key="2" :tab="$t('by_commit')" force-render>
                         <div class="assemblies_container">
-                            <a-col :span="15">
+                            <a-row type="flex" :gutter="[6, 6]">
+                                <a-col :xs="24" :sm="24" :lg="16" :xl="17" :xxl="17">
                                 <Assemblies/>
                             </a-col>
-                            <a-col :span="8">
+                            <a-col :xs="24" :sm="24" :lg="8" :xl="7" :xxl="7">
                                 <Senators/>
                             </a-col>
+                            </a-row>
                         </div>
                     </a-tab-pane>
                 </a-tabs>

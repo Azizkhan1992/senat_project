@@ -26,266 +26,7 @@ export const state = () => ({
             img: 'yt'
         }
     ],
-    menus: [
-        {
-            id: 1,
-            name: {
-                uz: 'Senat',
-                uzc: 'Сенат',
-                ru: 'Сенат'
-            },
-            subMenu: [
-                {
-                    id: 1,
-                    name: {
-                        uz: 'O\'zbekiston Respublikasi Oliy Majlisi',
-                        uzc: 'Ўзбекистон Республикаси Олий Мажлиси',
-                        ru: 'Олий Мажлис Республики Узбекистан'
-                    },
-                    link: '#'
-                },
-                {
-                    id: 2,
-                    name: {
-                        uz: 'O\'zbekistonda parlamentarizmning rivojlanish tarixi',
-                        uzc: 'Ўзбекистонда парламентаризмнинг ривожланиш тарихи',
-                        ru: 'История развития парламентаризма в Узбекистане'
-                    },
-                    link: '#'
-                },
-                {
-                    id: 3,
-                    name: {
-                        uz: 'Senat',
-                        uzc: 'Сенат',
-                        ru: 'Сенат'
-                    },
-                    link: '#'
-                },
-                {
-                    id: 4,
-                    name: {
-                        uz: 'Senat rahbariyati',
-                        uzc: 'Сенат раҳбарияти',
-                        ru: 'Сенатское руководство'
-                    },
-                    link: 'leadership'
-                },
-                {
-                    id: 5,
-                    name: {
-                        uz: 'Senat kengashi',
-                        uzc: 'Сенат кенгаши',
-                        ru: 'Совет Сената'
-                    },
-                    link: '#'
-                },
-                {
-                    id: 6,
-                    name: {
-                        uz: 'Qo‘mitalar',
-                        uzc: 'Қўмиталар',
-                        ru: 'Комитеты'
-                    },
-                    link: 'committees'
-                },
-                {
-                    id: 7,
-                    name: {
-                        uz: 'Komissiyalar',
-                        uzc: 'Комиссиялар',
-                        ru: 'Комиссии'
-                    },
-                    link: 'commissions'
-                },
-                {
-                    id: 8,
-                    name: {
-                        uz: 'Senatorlar',
-                        uzc: 'Сенаторлар',
-                        ru: 'Senators'
-                    },
-                    link: 'senators'
-                }
-            ]
-        },
-        {
-            id: 2,
-            name: {
-                uz: 'Hujjatlar',
-                uzc: 'Ҳужжатлар',
-                ru: 'Документы'
-            },
-            subMenu: [
-                {
-                    id: 6,
-                    name: {
-                        uz: 'Qonunlar',
-                        uzc: 'Қонунлар',
-                        ru: 'Законы'
-                    },
-                    link: '#'
-                },
-                {
-                    id: 7,
-                    name: {
-                        uz: 'Qarorlar',
-                        uzc: 'Қарорлар',
-                        ru: 'Решения'
-                    },
-                    link: '#'
-                }
-            ]
-        },
-        {
-            id: 3,
-            name: {
-                uz: 'Yalpi majlislar',
-                uzc: 'Ялпи мажлислар',
-                ru: 'Пленарные заседания'
-            },
-            link: '#'
-        },
-        {
-            id: 4,
-            name: {
-                uz: 'Kengash majlislari',
-                uzc: 'Кенгаш мажлислари',
-                ru: 'Заседания Совета'
-            },
-            link: '#'
-        },
-        {
-            id: 5,
-            name: {
-                uz: 'Tadbirlar',
-                uzc: 'Тадбирлар',
-                ru: 'События'
-            },
-            type: 'section',
-            subMenu: [
-                {
-                    id: 8,
-                    name: {
-                        uz: 'Palatalarning qo\'shma majlislari',
-                        uzc: 'Палаталарнинг қўшма мажлислари',
-                        ru: 'Совместные заседания палат'
-                    },
-                    link: 'events/categories/Palatalarning qo\'shma majlislari'
-                },
-                {
-                    id: 9,
-                    name: {
-                        uz: 'Qo\'mita va komissiyalar majlislari',
-                        uzc: 'Қўмита ва комиссиялар мажлислари',
-                        ru: 'Заседания комитетов и комиссий'
-                    },
-                    link: 'events/categories/Qo\'mita va komissiyalar majlislari'
-                },
-                {
-                    id: 10,
-                    name: {
-                        uz: 'Konferensiyalar, davra suhbatlari, seminarlar va boshqa tadbirlar',
-                        uzc: 'Конференсиялар, давра суҳбатлари, семинарлар ва бошқа тадбирлар',
-                        ru: 'Конференции, круглые столы, семинары и другие мероприятия'
-                    },
-                    link: 'events/categories/Konferensiyalar, davra suhbatlari, seminarlar va boshqa tadbirlar'
-                },
-                {
-                    id: 11,
-                    name: {
-                        uz: 'Tabriklar',
-                        uzc: 'Табриклар',
-                        ru: 'Поздравления'
-                    },
-                    link: 'events/categories/Tabriklar'
-                },
-                {
-                    id: 12,
-                    name: {
-                        uz: 'Fuqaro murojaati',
-                        uzc: 'Фуқаро мурожаати',
-                        ru: 'Обращение граждан'
-                    },
-                    link: 'events/categories/Fuqaro murojaati'
-                }
-            ]
-        },
-        {
-            id: 6,
-            name: {
-                uz: 'Xalqaro hamkorlik',
-                uzc: 'Халқаро ҳамкорлик',
-                ru: 'Международное сотрудничество'
-            },
-            subMenu: [
-                {
-                    id: 13,
-                    name: {
-                        uz: 'Xorijiy delegatsiyalar tashrifi',
-                        uzc: 'Хорижий делегациялар ташрифи',
-                        ru: 'Визит иностранных делегаций'
-                    },
-                    link: '#'
-                },
-                {
-                    id: 14,
-                    name: {
-                        uz: 'Senat delegatsiyalarining xorijga safari',
-                        uzc: 'Сенат делегацияларининг хорижга сафари',
-                        ru: 'Поездка делегаций Сената за границу'
-                    },
-                    link: '#'
-                },
-                {
-                    id: 15,
-                    name: {
-                        uz: 'Parlamentlararo hamkorlik',
-                        uzc: 'Парламентлараро ҳамкорлик',
-                        ru: 'Межпарламентское сотрудничество'
-                    },
-                    link: '#'
-                }
-            ]
-        },
-        {
-            id: 7,
-            name: {
-                uz: 'Nazorat-tahlil faoliyati',
-                uzc: 'Назорат-таҳлил фаолияти',
-                ru: 'Мониторинг и анализ деятельности'
-            },
-            subMenu: [
-                {
-                    id: 16,
-                    name: {
-                        uz: 'Parlament eshituvlari',
-                        uzc: 'Парламент эшитувлари',
-                        ru: 'Парламентские слушания'
-                    },
-                    link: '#'
-                },
-                {
-                    id: 17,
-                    name: {
-                        uz: 'Qonun hujjatlarining ijrosini o\'rganish',
-                        uzc: 'Қонун ҳужжатларининг ижросини ўрганиш',
-                        ru: 'Изучение оформления правоустанавливающих документов'
-                    },
-                    link: '#'
-                }
-            ]
-        },
-        {
-            id: 8,
-            name: {
-                uz: 'Taraqqiyot strategiyasi',
-                uzc: 'Тараққиёт стратегияси',
-                ru: 'Стратегия развития'
-            },
-            link: '#'
-        }
-    ],
+    menus: [],
     hotNews: [
         {
             id: 1,
@@ -347,110 +88,8 @@ export const state = () => ({
         }
     ],
 
-    news: [
-        {
-            id: 1,
-            title: {
-                uz: 'Qashqadaryo viloyatining turizm salohiyatini rivojlantirish...',
-                uzc: 'Қашқадарё вилоятининг туризм салоҳиятини ривожлантириш...',
-                ru: 'Развитие туристического потенциала Кашкадарьинской области...'
-            },
-            descript: {
-                uz: 'Shahrisabz shahrida Senatning Xalqaro munosabatlar, tashqi iqtisodiy...',
-                uzc: 'Шаҳрисабз шаҳрида Сенатнинг Халқаро муносабатлар, ташқи иқтисодий...',
-                ru: 'В Шахрисабзе Сенат международных отношений, внешнеэкономической...'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'news1.png'
-        },
-        {
-            id: 2,
-            title: {
-                uz: 'Oliy sud tarkibiga o‘zgartirishlar kiritish to‘g‘risidagi masala ko‘rib chiqildi',
-                uzc: 'Олий суд таркибига ўзгартиришлар киритиш тўғрисидаги масала кўриб чиқилди',
-                ru: 'Рассмотрен вопрос о внесении изменений в состав Верховного суда'
-            },
-            descript: {
-                uz: 'Senatning o‘ttiz to‘qqizinchi yalpi majlisida Oliy sud tarkibiga o‘zgartirishlar kiritish to‘g‘risidagi masala ko‘rib chiqildi. Senat Sarvarbek Azimjonovich Raxmonov, Ibragim Mirzaraximovich Alimov va Azamat Shodmonovich Ikro',
-                uzc: 'Сенатнинг ўттиз тўққизинчи ялпи мажлисида Олий суд таркибига ўзгартиришлар киритиш тўғрисидаги масала кўриб чиқилди. Сенат Сарварбек Азимжонович Рахмонов, Ибрагим Мирзарахимович Алимов ва Азамат Шодмонович Икро',
-                ru: 'На тридцать девятом пленарном заседании Сената рассматривался вопрос о внесении изменений в состав Верховного суда. Сенат Сарварбек Азимжонович Рахмонов, Ибрагим Мирзарахимович Алимов и Азамат Шодмонович Икро'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'news2.jpg'
-        },
-        {
-            id: 3,
-            title: {
-                uz: 'Orolbo‘yi mintaqasini kompleks rivojlantirish va ekologik barqarorligini ta\'minlashga oid muhim masalalar muhokama qilindi  ',
-                uzc: 'Оролбўйи минтақасини комплекс ривожлантириш ва экологик барқарорлигини таъминлашга оид муҳим масалалар муҳокама қилинди',
-                ru: 'Обсуждены важные вопросы, связанные с комплексным развитием островного региона и обеспечением экологической стабильности'
-            },
-            descript: {
-                uz: 'Yalpi majlisda Orolbo‘yi mintaqasida ekologik barqarorlikni ta\'minlash hamda zamonaviy innovasion texnologiyalarni keng tatbiq qilish bo‘yicha belgilangan vazifalarning ijro etilishi holati muhokama qilindi. Ta\'kidlanga',
-                uzc: 'Ялпи мажлисда Оролбўйи минтақасида экологик барқарорликни таъминлаш ҳамда замонавий инновацион технологияларни кенг татбиқ қилиш бўйича белгиланган вазифаларнинг ижро этилиши ҳолати муҳокама қилинди. Таъкидланга',
-                ru: 'На пленарном заседании обсужден ход выполнения поставленных задач по обеспечению экологической стабильности и широкому применению современных инновационных технологий в Приаралье. Подчеркивать'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'news3.jpg'
-        }
-    ],
 
-    tagNews: [
-        {
-            id: 1,
-            title: {
-                uz: 'YeXHT bilan hamkorlik aloqalari yanada faollashadi',
-                uzc: 'ЕХҲТ билан ҳамкорлик алоқалари янада фаоллашади',
-                ru: 'Сотрудничество с ОБСЕ станет более активным'
-            },
-            date: {
-                uz: '12 noyabr, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'news4.png'
-        },
-        {
-            id: 2,
-            title: {
-                uz: 'Oliy Majlis Senati Raisi Tanzila Narbaeva: Tashqi ishlar vazirligi tomonidan salmoqli ishlar amalga oshirilayotganini qayd etamiz',
-                uzc: 'Олий Мажлис Сенати Раиси Танзила Нарбаева: Ташқи ишлар вазирлиги томонидан салмоқли ишлар амалга оширилаётганини қайд этамиз',
-                ru: 'Председатель Сената Олий Мажлиса Танзила Нарбаева: Отмечаем, что важная работа проводится Министерством иностранных дел'
-            },
-            date: {
-                uz: '12 noyabr, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'news5.png'
-        },
-        {
-            id: 3,
-            title: {
-                uz: 'Senatning yalpi majlisida Tashqi ishlar vazirligining 2022 yildagi faoliyati to‘g‘risidagi axboroti eshitildi.',
-                uzc: 'Сенатнинг ялпи мажлисида Ташқи ишлар вазирлигининг 2022 йилдаги фаолияти тўғрисидаги ахбороти эшитилди.',
-                ru: 'Информация о деятельности МИД в 2022 году была заслушана на пленарном заседании Сената.'
-            },
-            date: {
-                uz: '12 noyabr, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'news6.png'
-        }
-    ],
+    homeEvents: [],
 
     assemblies: [
         {
@@ -1271,114 +910,7 @@ export const state = () => ({
             number: '2 574'
         }
     ],
-
-    homeArticles: [
-        {
-            id: 1,
-            title: {
-                uz: 'O‘zbekiston mintaqaviy va global masalalarga yechim topishda asosiy tashabbuskorga aylanmoqda',
-                uzc: 'Ўзбекистон минтақавий ва глобал масалаларга ечим топишда асосий ташаббускорга айланмоқда',
-                ru: 'Узбекистан становится главным инициатором в поиске решений региональных и глобальных вопросов'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            }
-        },
-        {
-            id: 2,
-            title: {
-                uz: 'Sirdaryo-Qonliko‘l do‘stlik bayrami barchaga yuqori kayfiyat ulashdi',
-                uzc: 'Сирдарё-Қонликўл дўстлик байрами барчага юқори кайфият улашди',
-                ru: 'Праздник дружбы «Сырдарья-Конликоль» подарил всем хорошее настроение'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            }
-        },
-        {
-            id: 3,
-            title: {
-                uz: 'O‘zbekiston mintaqaviy va global masalalarga yechim topishda asosiy tashabbuskorga aylanmoqda',
-                uzc: 'Ўзбекистон минтақавий ва глобал масалаларга ечим топишда асосий ташаббускорга айланмоқда',
-                ru: 'Узбекистан становится главным инициатором в поиске решений региональных и глобальных вопросов'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            }
-        },
-        {
-            id: 4,
-            title: {
-                uz: 'Tinchlik va ezgulik ovozi bo‘lib jaranglagan anjuman',
-                uzc: 'Тинчлик ва эзгулик овози бўлиб жаранглаган анжуман',
-                ru: 'Конференция, прозвучавшая голосом мира и добра'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            }
-        },
-        {
-            id: 5,
-            title: {
-                uz: 'Senat Bundestag bilan hamkorlikni faollashtiradi',
-                uzc: 'Сенат Бундестаг билан ҳамкорликни фаоллаштиради',
-                ru: 'Сенат активизирует сотрудничество с Бундестагом'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            }
-        },
-        {
-            id: 6,
-            title: {
-                uz: 'Senat qo‘mitalari qo‘shma majlisida xalq ta\'limi vazirining axboroti eshitildi',
-                uzc: 'Сенат қўмиталари қўшма мажлисида халқ таълими вазирининг ахбороти эшитилди',
-                ru: 'Информация министра народного просвещения заслушана на совместном заседании комитетов Сената'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            }
-        },
-        {
-            id: 7,
-            title: {
-                uz: 'ShHTning Samarqand sammiti mamlakatlar taraqqiyotining garovi',
-                uzc: 'ШҲТнинг Самарқанд саммити мамлакатлар тараққиётининг гарови',
-                ru: 'Самаркандский саммит ШОС – залог развития стран'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            }
-        },
-        {
-            id: 8,
-            title: {
-                uz: 'Samarqand sammiti ShHT makonida butkul yangi davrni boshlab beradi',
-                uzc: 'Самарқанд саммити ШҲТ маконида буткул янги даврни бошлаб беради',
-                ru: 'Саммит в Самарканде откроет совершенно новую эру на пространстве ШОС'
-            },
-            date: {
-                uz: '12 noyabrь, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            }
-        }
-    ],
-
+    homeArticles: [],
     videoGallery: [
         {
             id: 1,
@@ -1441,65 +973,7 @@ export const state = () => ({
             img: 'video4.png'
         }
     ],
-
-    photoGallery: [
-        {
-            id: 1,
-            title: {
-                uz: 'Qashqadaryo viloyatining turizm salohiyatini rivojlantirish...',
-                uzc: 'Қашқадарё вилоятининг туризм салоҳиятини ривожлантириш...',
-                ru: 'Развитие туристического потенциала Кашкадарьинской области...'
-            },
-            date: {
-                uz: '12 noyabr, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'video4.png'
-        },
-        {
-            id: 2,
-            title: {
-                uz: 'Fotoreportaj: “Mahalla – beshta tashabbus beshigi” ko‘rik-tanlovi g‘oliblarini taqdirlash marosimi bo‘lib o‘tdi',
-                uzc: 'Фоторепортаж: “Маҳалла – бешта ташаббус бешиги” кўрик-танлови ғолибларини тақдирлаш маросими бўлиб ўтди',
-                ru: 'Фоторепортаж: Состоялась церемония награждения победителей конкурса «Mahalla – beshta tashabbus beshigi»'
-            },
-            date: {
-                uz: '12 noyabr, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'photo1.jpg'
-        },
-        {
-            id: 3,
-            title: {
-                uz: 'Oliy Majlis Senati Raisining MDH Parlamentlararo Assambleyasi Kengashi majlisi ishidagi ishtiroki',
-                uzc: 'Олий Мажлис Сенати Раисининг МДҲ Парламентлараро Ассамблеяси Кенгаши мажлиси ишидаги иштироки',
-                ru: 'Участие Председателя Сената Олий Мажлиса в заседании Совета Межпарламентской Ассамблеи СНГ'
-            },
-            date: {
-                uz: '12 noyabr, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'photo2.jpg'
-        },
-        {
-            id: 4,
-            title: {
-                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senatining yigirma birinchi yalpi majlisi',
-                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенатининг йигирма биринчи ялпи мажлиси',
-                ru: 'Двадцать первое пленарное заседание Сената Олий Мажлиса Республики Узбекистан'
-            },
-            date: {
-                uz: '12 noyabr, 2022 y',
-                uzc: '12 ноябрь, 2022 й',
-                ru: '12 ноября 2022 г.'
-            },
-            img: 'photo3.jpg'
-        }
-    ],
+    photoGallery: [],
     usefulSites: [
         {
             id: 1,
@@ -1546,56 +1020,54 @@ export const state = () => ({
             img: 'img4.svg'
         }
     ],
+    contacts: {},
 
-    contacts: {
-        phone1: '+998 90 145-74-74',
-        phone2: '+998 90 145-74-74',
-        address: 'Тошкент шаҳри, Ислам Каримов кўчаси, 9-уй'
-    },
-    leaders: [
-        {
-            id: 1,
-            name: {
-                uz: 'Narbaeva Tanzila Kamalovna',
-                uzc: 'Нарбаева Танзила Камаловна',
-                ru: 'Нарбаева Танзила Камаловна'
-            },
-            step: {
-                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisi',
-                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раиси',
-                ru: 'Председатель Сената Олий Мажлиса Республики Узбекистан'
-            },
-            img: 'Narbayeva-Tanzila.jpg'
-        },
-        {
-            id: 2,
-            name: {
-                uz: 'Safoev Sodiq Solixovich',
-                uzc: 'Сафоев Содиқ Солихович',
-                ru: 'Сафоев Садик Солихович'
-            },
-            step: {
-                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisining birinchi o‘rinbosari',
-                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раисининг биринчи ўринбосари',
-                ru: 'Олий Мажлис Республики Узбекистан Первый заместитель Председателя Сената'
-            },
-            img: 'img40.png'
-        },
-        {
-            id: 3,
-            name: {
-                uz: 'Orinbaev Amanbay Tleubaevich',
-                uzc: 'Оринбаев Аманбай Тлеубаевич',
-                ru: 'Оринбаев Аманбай Тлеубаевич'
-            },
-            step: {
-                uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisi o‘rinbosari, Qoraqalpog‘iston Respublikasi Jo‘qorg‘i Kengesi Raisi',
-                uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раиси ўринбосари, Қорақалпоғистон Республикаси Жўқорғи Кенгеси Раиси',
-                ru: 'Заместитель Председателя Сената Олий Мажлиса Республики Узбекистан, Председатель Джокорги Совета Республики Каракалпакстан'
-            },
-            img: 'img15.png'
-        }
-    ],
+    // leaders: [
+    //     {
+    //         id: 1,
+    //         name: {
+    //             uz: 'Narbaeva Tanzila Kamalovna',
+    //             uzc: 'Нарбаева Танзила Камаловна',
+    //             ru: 'Нарбаева Танзила Камаловна'
+    //         },
+    //         step: {
+    //             uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisi',
+    //             uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раиси',
+    //             ru: 'Председатель Сената Олий Мажлиса Республики Узбекистан'
+    //         },
+    //         img: 'Narbayeva-Tanzila.jpg'
+    //     },
+    //     {
+    //         id: 2,
+    //         name: {
+    //             uz: 'Safoev Sodiq Solixovich',
+    //             uzc: 'Сафоев Содиқ Солихович',
+    //             ru: 'Сафоев Садик Солихович'
+    //         },
+    //         step: {
+    //             uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisining birinchi o‘rinbosari',
+    //             uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раисининг биринчи ўринбосари',
+    //             ru: 'Олий Мажлис Республики Узбекистан Первый заместитель Председателя Сената'
+    //         },
+    //         img: 'img40.png'
+    //     },
+    //     {
+    //         id: 3,
+    //         name: {
+    //             uz: 'Orinbaev Amanbay Tleubaevich',
+    //             uzc: 'Оринбаев Аманбай Тлеубаевич',
+    //             ru: 'Оринбаев Аманбай Тлеубаевич'
+    //         },
+    //         step: {
+    //             uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisi o‘rinbosari, Qoraqalpog‘iston Respublikasi Jo‘qorg‘i Kengesi Raisi',
+    //             uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раиси ўринбосари, Қорақалпоғистон Республикаси Жўқорғи Кенгеси Раиси',
+    //             ru: 'Заместитель Председателя Сената Олий Мажлиса Республики Узбекистан, Председатель Джокорги Совета Республики Каракалпакстан'
+    //         },
+    //         img: 'img15.png'
+    //     }
+    // ],
+
+    leaders: [],
 
     committess: [
         {
@@ -1995,16 +1467,66 @@ export const state = () => ({
             viewed: 48,
             img: 'img14.jpg'
         }
-    ]
+    ],
 })
 
 export const actions = {
-    // counterUp({ state, commit }){
-    //     commit('setCounter', state.counter + 1)
-    //   }
+    async getMenus({commit}){
+        const res = await this.$axios.get(`/menu/list?parent_id=0`)
+        commit('Set_Menu', res.data.data)
+        return res.data.data
+    },
+
+    async getHomeEvents({commit}){
+        const res = await this.$axios.get(`/post/list?limit=6&offset=0&post_groups=events,plenary-sessions,council-meetings,international-cooperation,controlactivity`)
+        commit('Set_Home_Events', res.data.data.results)
+        return res.data.data.results
+    },
+
+    async getHomeArticles({commit}){
+        const res = await this.$axios.get(`/post/list?post_group=article&limit=6`)
+        commit('Set_Home_Articles', res.data.data.results)
+        return res.data.data.results
+    },
+    async getContacts({commit}){
+        const res = await this.$axios.get(`/contacts/list`)
+        commit('Set_Contacts', res.data.data)
+        return res.data.data
+    },
+
+    async getHomePhotoGallery({commit}, params){
+        const res = await this.$axios.get(`post/list?post_group=gallery&has_content=false&limit=${params.limit}`)
+        commit('Set_Home_Gallery', res.data.data.results)
+        return res.data.data.results
+    },
+
+    async getSenatLeaders({commit}){
+        const res = await this.$axios.get(`/person-group/list?limit=12&offset=0&menu_category=leadership`)
+        commit('Set_Senat_Leaders', res.data.data.results)
+        return res.data.data.results
+    }
 }
 
 export const mutations = {
+    Set_Menu(state, menus){
+        state.menus = menus
+    },
+    Set_Home_Events(state, events){
+        state.homeEvents = events
+    },
+    Set_Home_Articles(state, articles){
+        state.homeArticles = articles
+    },
+    Set_Contacts(state, contacts){
+        state.contacts = contacts
+    },
+    Set_Home_Gallery(state, photos){
+        state.photoGallery = photos
+    },
+
+    Set_Senat_Leaders(state, leaders){
+        state.leaders = leaders
+    },
     changeDistrict(state, param){
         if(param == null){
             state.senators = state.allSenators
@@ -2018,7 +1540,7 @@ export const mutations = {
         } else {
             state.senators = state.allSenators.filter(e => e.assembly === param)
         }
-    }
+    },
 }
 
 export const getters = {
