@@ -8,16 +8,21 @@
                 <ul>
                     <li v-for="menu in menus" :key="menu.id">
                         <a-collapse accordion v-if="menu?.children !== null" :bordered="false" >
-                            <a-collapse-panel key="1" :header="menu.slug" :showArrow="false">
+                            <a-collapse-panel key="1" :header="menu.name" :showArrow="false">
                                 <div class="menu__items" v-for="item in menu.children" :key="item.id">
-                                    <nuxt-link to="#">{{ item.slug }}</nuxt-link>
+                                    <nuxt-link v-if="item.category == null"
+                                    :to="staticPages(item.slug)"
+                                    class="descP">{{ item.name }}</nuxt-link>
+                                <nuxt-link v-else :to="acceptLang(item.category)" class="descP">
+                                    {{ item.name }}
+                                </nuxt-link>
                                 </div>
                             </a-collapse-panel>
                         </a-collapse>
 
                         <font-awesome-icon :icon="['fas', 'chevron-down']" v-if="menu?.children !== null" />
 
-                        <nuxt-link to="#" v-else>{{ menu.slug }}</nuxt-link>
+                        <nuxt-link to="#" v-else>{{ menu.name }}</nuxt-link>
                     </li>
                 </ul>
             </div>
@@ -51,6 +56,12 @@ export default {
             if(this.allMenus?.length>0){
                 this.menus = this.allMenus
             }
+        },
+        acceptLang(link){
+            return `/${this.$i18n.locale}/${link}`
+        },
+        staticPages(link){
+            return `/${this.$i18n.locale}/static/${link}`
         },
         customExpandIcon(props) {
             if (props.isActive) {

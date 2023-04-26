@@ -332,7 +332,6 @@
         .navigation_wrapper{
           width: 100%;
             display: flex;
-            justify-content: space-between;
             position: relative;
 
             .ImgWr{
@@ -340,6 +339,8 @@
             }
 
             .navItems{
+              margin-right: 16px;
+              max-height: 68px;
 
               .nav_dropdown{
                 position: absolute;

@@ -6,7 +6,9 @@
 @import './components/customs.scss';
 @import './components/leaders.scss';
 @import './components/committees.scss';
-@import './components/events.scss';
+@import './components/events.scss',
+'./components/static.scss'
+;
 
 
 @font-face {

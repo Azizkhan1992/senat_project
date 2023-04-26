@@ -2,7 +2,7 @@
     <section class="breadcrumb_section">
         <div class="breadcrumb_container">
             <div class="breadcrumb_header">
-                <nuxt-link to="/" class="descP">
+                <nuxt-link :to="localePath('/')" class="descP">
                     <font-awesome-icon :icon="['fasl', 'house']" />
                     {{ mainPage?.[$i18n.locale] }}
                 </nuxt-link>
@@ -12,7 +12,9 @@
 
                 <span v-if="sectionName && pageName !== null">/</span>
 
-                <p v-if="isInner == false" class="descBl">{{ pageName?.[$i18n.locale] }}</p>
+                <p v-if="isInner == false && typeof(pageName) == 'string'" class="descBl">{{ pageName }}</p>
+
+                <p v-else-if="isInner == false && typeof(pageName) == 'object'" class="descBl">{{ pageName?.[$i18n.locale] }}</p>
 
                 <p v-else class="descBl" :class="isInner == true ? 'oldPage' : ''" @click="goBack">{{ pageName?.[$i18n.locale] }}</p>
 
@@ -20,8 +22,9 @@
                 <p v-if="!isInner" class="descBl">{{ innerPage?.[$i18n.locale] }}</p>
             </div>
             <div class="active_page_name">
-                <h2 v-if="pageName === null">{{ sectionName?.[$i18n.locale] }}</h2>
-                <h2 v-if="isInner == false">{{ pageName?.[$i18n.locale] }}</h2>
+                <h2 v-if="pageName === null && pageName !== ''">{{ sectionName?.[$i18n.locale] }}</h2>
+                <h2 v-if="isInner == false && typeof(pageName) == 'string'">{{ pageName }}</h2>
+                <h2 v-else-if="isInner == false && typeof(pageName) == 'object'">{{ pageName?.[$i18n.locale] }}</h2>
                 <h2 v-else>{{ innerPage?.[$i18n.locale] }}</h2>
             </div>
         </div>
@@ -36,7 +39,7 @@ export default {
             default: () => {}
         },
         pageName: {
-            type: Object,
+            type: [Object, String],
             default: () => null
         },
         innerPage: {

@@ -31,7 +31,7 @@
         <div class="header_center">
             <div class="header_center_content df-spb commonContent">
                 <div class="header_center_logo df-cen">
-                    <nuxt-link to="/">
+                    <nuxt-link :to="localePath('/')">
                         <div class="logo_img ImgWr">
                             <img src="../static/images/sign.png" alt="">
                         </div>

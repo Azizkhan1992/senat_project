@@ -88,6 +88,8 @@ export const state = () => ({
         }
     ],
 
+    allEvents: [],
+
 
     homeEvents: [],
 
@@ -1022,51 +1024,6 @@ export const state = () => ({
     ],
     contacts: {},
 
-    // leaders: [
-    //     {
-    //         id: 1,
-    //         name: {
-    //             uz: 'Narbaeva Tanzila Kamalovna',
-    //             uzc: 'Нарбаева Танзила Камаловна',
-    //             ru: 'Нарбаева Танзила Камаловна'
-    //         },
-    //         step: {
-    //             uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisi',
-    //             uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раиси',
-    //             ru: 'Председатель Сената Олий Мажлиса Республики Узбекистан'
-    //         },
-    //         img: 'Narbayeva-Tanzila.jpg'
-    //     },
-    //     {
-    //         id: 2,
-    //         name: {
-    //             uz: 'Safoev Sodiq Solixovich',
-    //             uzc: 'Сафоев Содиқ Солихович',
-    //             ru: 'Сафоев Садик Солихович'
-    //         },
-    //         step: {
-    //             uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisining birinchi o‘rinbosari',
-    //             uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раисининг биринчи ўринбосари',
-    //             ru: 'Олий Мажлис Республики Узбекистан Первый заместитель Председателя Сената'
-    //         },
-    //         img: 'img40.png'
-    //     },
-    //     {
-    //         id: 3,
-    //         name: {
-    //             uz: 'Orinbaev Amanbay Tleubaevich',
-    //             uzc: 'Оринбаев Аманбай Тлеубаевич',
-    //             ru: 'Оринбаев Аманбай Тлеубаевич'
-    //         },
-    //         step: {
-    //             uz: 'O‘zbekiston Respublikasi Oliy Majlisi Senati Raisi o‘rinbosari, Qoraqalpog‘iston Respublikasi Jo‘qorg‘i Kengesi Raisi',
-    //             uzc: 'Ўзбекистон Республикаси Олий Мажлиси Сенати Раиси ўринбосари, Қорақалпоғистон Республикаси Жўқорғи Кенгеси Раиси',
-    //             ru: 'Заместитель Председателя Сената Олий Мажлиса Республики Узбекистан, Председатель Джокорги Совета Республики Каракалпакстан'
-    //         },
-    //         img: 'img15.png'
-    //     }
-    // ],
-
     leaders: [],
 
     committess: [
@@ -1483,6 +1440,12 @@ export const actions = {
         return res.data.data.results
     },
 
+    async getAllEvents({commit}, params){
+        const res = await this.$axios.get(`/post/list?limit=${params.limit}&menu_slug=${params.name}`)
+        commit('Set_All_Events', res.data)
+        return res.data
+    },
+
     async getHomeArticles({commit}){
         const res = await this.$axios.get(`/post/list?post_group=article&limit=6`)
         commit('Set_Home_Articles', res.data.data.results)
@@ -1504,6 +1467,31 @@ export const actions = {
         const res = await this.$axios.get(`/person-group/list?limit=12&offset=0&menu_category=leadership`)
         commit('Set_Senat_Leaders', res.data.data.results)
         return res.data.data.results
+    },
+
+    getStaticMenu(_, {slug}){
+        return new Promise(async(resolve, reject) => {
+            try{
+                const res = await this.$axios.get(`/menu/${slug}`)
+                const {status, data, message} = res.data
+                if(status){
+                    resolve({
+                        data,
+                        status
+                    })
+                } else {
+                    reject({
+                        message,
+                        status
+                    })
+                }
+            } catch(err){
+                reject({
+                    message: err,
+                    status: false
+                })
+            }
+        })
     }
 }
 
@@ -1527,6 +1515,10 @@ export const mutations = {
     Set_Senat_Leaders(state, leaders){
         state.leaders = leaders
     },
+
+    Set_All_Events(state, events){
+        state.allEvents = events
+    },
     changeDistrict(state, param){
         if(param == null){
             state.senators = state.allSenators
@@ -1546,6 +1538,7 @@ export const mutations = {
 export const getters = {
     getSenators(state){
         return state.senators
-    }
-    // myGetter(state){ return state.counter + 1000}
+    },
+
+    getMenus(state){return state.menus}
 }

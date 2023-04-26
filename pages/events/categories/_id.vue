@@ -2,7 +2,7 @@
     <section class="events-category-section">
         <MainHeaderLayout/>
         <Breadcrumbs :sectionName="name" :pageName="activePage.name"/>
-        <EventsInnerPage :events="activeEvents"/>
+        <EventsInnerPage :events="allEvents"/>
         <MainFooterLayout/>
     </section>
 </template>
@@ -16,43 +16,28 @@ export default {
     components: {MainHeaderLayout, Breadcrumbs, EventsInnerPage, MainFooterLayout},
     data(){
         return{
-            allMenu: this.$store.state.menus[4].subMenu,
             name: {
                 uz: 'Tadbirlar',
                 uzc: 'Тадбирлар',
                 ru: 'События'
             },
             activePage: {},
-            allEvents: this.$store.state.events,
+            allEvents: {},
             activeMenuId: null,
-            activeEvents: []
+            activeEvents: [],
+            pagePath: this.$route.params.id
         }
     },
     mounted(){
-        this.getPageName()
-        this.getActiveMenu()
+        this.getEvents()
     },
     methods: {
-        getPageName(){
-            let name = this.$route.params.id
-            this.allMenu.forEach(element => {
-                if(element.link.split('/')[element.link.split('/').length-1] == name){
-                    this.activePage = element
-                }
-            });
-        },
-        getActiveMenu(){
-            let name = this.$route.params.id,
-            activeId
-            for(let i = 0; i<this.allMenu.length; i++){
-                if(this.allMenu[i].link.split('/')[this.allMenu[i].link.split('/').length - 1] === name){
-                    activeId = i+1
-                }
+        async getEvents(){
+            const params = {
+                limit: 10,
+                name: this.pagePath
             }
-
-            if(activeId){
-                this.activeEvents = this.allEvents.filter(e => e.eventType === activeId)
-            }
+            this.allEvents = await this.$store.dispatch('getAllEvents', params)
         }
     }
 }

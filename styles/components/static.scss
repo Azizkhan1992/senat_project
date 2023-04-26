@@ -1,0 +1,36 @@
+
+
+.static-section{
+    position: relative;
+    margin-top: -50px;
+    z-index: 9;
+
+    .main-page-content{
+
+        .page-wrapper{
+
+            .page-details{
+                padding: 24px;
+            box-sizing: border-box;
+            box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+            background: $colorWhite;
+            border-radius: 4px;
+
+            h3{
+                font-size: 1.25rem;
+                line-height: 150%;
+                font-weight: 700;
+                color: $textColorBl;
+            }
+
+            p{
+                font-size: 1.15rem;
+                line-height: 160%;
+                font-weight: 500;
+                color: $textColorBl;
+                opacity: 0.8;
+            }
+            }
+        }
+    }
+}

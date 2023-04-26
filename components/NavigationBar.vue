@@ -1,23 +1,32 @@
 <template>
     <nav class="navigation">
         <div class="navigation_content">
-                
+
             <div class="navigation_wrapper">
                 <div class="navItems" v-for="menu in menus" :key="menu.id">
                     <div class="navItem Item_visible" @click="dropdown(menu)">
-                        <p v-if="menu.children !== null && menu.on_header === true" class="descP" id="menu">{{ menu.slug }}</p>
-                        <a v-else-if="menu.on_header === true" :href="menu.category" class="descP">{{ menu.slug }}</a>
-                        <font-awesome-icon v-if="menu.children !== null && menu.on_header === true" :icon="['fas', 'chevron-down']" />
+                        <p v-if="menu.children !== null && menu.on_header === true" class="descP" id="menu">{{ menu.name }}
+                        </p>
+                        <a v-else-if="menu.on_header === true" :href="menu.category" class="descP">{{ menu.name }}</a>
+                        <font-awesome-icon v-if="menu.children !== null && menu.on_header === true"
+                            :icon="['fas', 'chevron-down']" />
                     </div>
 
                     <div class="nav_dropdown Item_hidden">
-                        <div class="nav_dropdown_item" v-show="dropdown.id === menu.id" v-for="dropdown in menus" :key="dropdown.id" :class="dropdownMenu === true && dropdown.id == openMenuPages?.id ? 'open' : '' ||
-                            dropdown.id !== openMenuPages?.id ? 'closed' : ''
-                        ">
+                        <div class="nav_dropdown_item" v-show="dropdown.id === menu.id" v-for="dropdown in menus"
+                            :key="dropdown.id" :class="dropdownMenu === true && dropdown.id == openMenuPages?.id ? 'open' : '' ||
+                                dropdown.id !== openMenuPages?.id ? 'closed' : ''
+                            ">
                             <div class="drop_item" id="drp" v-for="link in dropdown.children" :key="link.id">
-                                <nuxt-link v-if="link.category == null" :to="{path: `/${link.slug}`}" class="descP">{{ link.slug }}</nuxt-link>
-                                <nuxt-link v-else :to="`/${link.category}`" class="descP">
-                                    {{ link.slug }}
+                                <nuxt-link v-if="link.category == null"
+                                    :to="staticPages(link.slug)"
+                                    class="descP">{{ link.name }}</nuxt-link>
+
+                                    <nuxt-link v-else-if="link.category == 'events'" :to="toEvents(link.slug)" class="descP">
+                                        {{ link.name }}
+                                    </nuxt-link>
+                                <nuxt-link v-else :to="acceptLang(link.category)" class="descP">
+                                    {{ link.name }}
                                 </nuxt-link>
                             </div>
                         </div>
@@ -25,7 +34,7 @@
                 </div>
             </div>
 
-                
+
         </div>
 
 
@@ -48,14 +57,25 @@ export default {
             openMenuPages: null
         }
     },
-    mounted(){
+    mounted() {
         this.initialization()
     },
     methods: {
-        initialization(){
-            if(this.allMenus?.length>0){
+        initialization() {
+            if (this.allMenus?.length > 0) {
                 this.menus = this.allMenus
+                console.log(this.menus);
             }
+        },
+
+        acceptLang(link){
+            return `/${this.$i18n.locale}/${link}`
+        },
+        staticPages(link){
+            return `/${this.$i18n.locale}/static/${link}`
+        },
+        toEvents(link){
+            return `/${this.$i18n.locale}/events/categories/${link}`
         },
         dropdown(menu) {
             const selectedMenuId = menu.id

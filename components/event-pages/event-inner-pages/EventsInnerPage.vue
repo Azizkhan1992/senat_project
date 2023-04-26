@@ -5,25 +5,25 @@
                 <a-col :xs="24" :sm="24" :lg="18" :xl="18" :xxl="18">
                     <div class="events-content">
                         <a-row type="flex" :gutter="[24, 24]">
-                            <a-col :xs="24" :sm="24" :lg="12" :xl="12" :xxl="8" v-for="event in events" :key="event.id">
-                                <nuxt-link :to="`/events/${event.id}`" class="event-items">
+                            <a-col :xs="24" :sm="24" :lg="12" :xl="12" :xxl="8" v-for="event in events?.data?.results" :key="event.id">
+                                <nuxt-link :to="`/events/${event.slug}`" class="event-items">
                                     <div class="event-img_wrapper">
-                                        <img :src="require('../../../static/images/events/'+event.img)" alt="">
+                                        <img :src="event?.image" alt="">
                                     </div>
                                     <div class="event_details">
                                         <div class="details-header df-spb">
                                             <div class="event-viewed">
                                                 <font-awesome-icon :icon="['far', 'eye']" />
-                                                <span>{{ event.viewed }}</span>
+                                                <span>{{ event.views }}</span>
                                             </div>
                                             <div class="event-date">
                                                 <font-awesome-icon :icon="['far', 'clock']" />  
-                                                <span>{{ event.date }}</span>
+                                                <span>{{ event.pub_date }}</span>
                                             </div>
                                         </div>
 
-                                        <h3 class="title_box">{{ event.title?.[$i18n.locale] }}</h3>
-                                        <p class="desc_box">{{ event.descript?.[$i18n.locale] }}</p>
+                                        <h3 class="title_box">{{ event.title }}</h3>
+                                        <p class="desc_box">{{ event.short_content }}</p>
                                     </div>
                                 </nuxt-link>
                             </a-col>
@@ -44,8 +44,8 @@ export default {
     components: {SideBar},
     props: {
         events: {
-            type: Array,
-            default: () => []
+            type: Object,
+            default: () => {}
         }
     }
 }

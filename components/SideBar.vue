@@ -2,14 +2,27 @@
     <div class="sidebar_container">
         <div class="sidebar_wrapper">
             <div class="sidebar_header">
-                <h3 class="descT">{{ activeSubmenu?.name?.[$i18n.locale] }}</h3>
+                <h3 class="descT">{{ activeSubmenu?.name }}</h3>
             </div>
 
             <div class="sidebar_content">
-                <ul class="sidebar_items" :class="item?.link == activeMenu?.link ? 'active' : ''"
-                    v-for="item in activeSubmenu?.subMenu" :key="item.id">
-                    <li>
-                        <h4 class="descP">{{ item.name?.[$i18n.locale] }}</h4>
+                <ul class="sidebar_items" :class="item?.slug == activeMenu?.slug ? 'active' : ''"
+                    v-for="item in activeSubmenu?.children" :key="item.id">
+                    <li v-if="item.category == null">
+                        <nuxt-link  :to="staticPages(item.slug)">
+                            <h4 class="descP">{{ item.name }}</h4>
+                        </nuxt-link>
+                        
+                    </li>
+                    <li v-else-if="item.category == 'events'">
+                        <nuxt-link  :to="toEvents(item.slug)">
+                            <h4 class="descP">{{ item.name }}</h4>
+                        </nuxt-link>
+                    </li>
+                    <li v-else>
+                        <nuxt-link :to="acceptLang(item.category)">
+                            <h4 class="descP">{{ item.name }}</h4>
+                        </nuxt-link>
                     </li>
                 </ul>
             </div>
@@ -17,6 +30,7 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name: 'side-bar',
     data() {
@@ -30,52 +44,43 @@ export default {
     mounted() {
         this.getSidebarItems()
     },
+    computed: {
+        ...mapGetters(['getMenus'])
+    },
     methods: {
         getSidebarItems() {
-            let fullRoute = this.$route.path.split('/'),
-                route = this.$route.path.split('/').pop(),
-
-                innerRoute = fullRoute[1]
-
-            this.menus.forEach(element => {
-                if (element.subMenu) {
-                    element?.subMenu.forEach(elem => {
-                        if (elem.link == fullRoute[fullRoute.length - 1]) {
-                            this.activeMenu = elem
-                            this.activeId = elem.id
-                            this.activeSubmenu = element
-                        } else if (element.type === 'section'){
-                            this.activeSubmenu = element
-                            element.subMenu.forEach(elem => {
-                                if(elem.link.split('/').pop() === this.$route.params.id){
-                                    this.activeMenu = elem
-                                }
-                            })
-                        }
-                        
-                        else {
-                            this.menus.forEach(element => {
-                                if (element.subMenu) {
-                                    element.subMenu.forEach(elem => {
-                                        if (elem.link == innerRoute) {
-                                            this.activeMenu = elem
-                                            this.activeId = elem.id
-                                            this.activeSubmenu = element
-                                        }
-                                    })
-                                }
-                            });
-                        }
-                    })
-
-                    // if(element.type === 'section'){
-                    //     this.activeSubmenu = element
-                    // }
+            let fullRoute = this.$route.path.split('/')
+            this.getMenus.forEach(element => {
+                if (element.children !== null) {
+                    if(element.category !== 'events'){
+                        element.children.forEach(elem => {
+                        if (elem?.slug == fullRoute[fullRoute.length-1]) {
+                                this.activeSubmenu = element
+                                this.activeMenu = elem
+                            }
+                        })
+                    } else {
+                        element.children.forEach(elem => {
+                            if(elem.slug == this.$route.params.id){
+                                this.activeSubmenu = element
+                                this.activeMenu = elem
+                            }
+                        })
+                    }
+            
                 }
             });
 
-
-        }
+        },
+        acceptLang(link){
+            return `/${this.$i18n.locale}/${link}`
+        },
+        staticPages(link){
+            return `/${this.$i18n.locale}/static/${link}`
+        },
+        toEvents(link){
+            return `/${this.$i18n.locale}/events/categories/${link}`
+        },
     }
 }
 </script>

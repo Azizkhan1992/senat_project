@@ -40,18 +40,7 @@ export default {
     methods: {
         async getLeaders(){
             this.leaders = await this.$store.dispatch('getSenatLeaders')
-            console.log(this.leaders)
         },
-        getActivePages(){
-            let activeId = this.$route.query.id
-            this.activeMenu = this.menus.filter(e => e.id == activeId)[0].subMenu
-            this.name = this.menus.filter(e => e.id == activeId)[0].name
-        },
-        getActiveRoute(){
-            let active = this.$route.path.split('/').pop()
-
-            console.log(active)
-        }
     }
 }
 </script>
